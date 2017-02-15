@@ -6,9 +6,11 @@ target 'RideShareApp' do
   use_frameworks!
 
   # Pods for RideShareApp
-    pod 'Alamofire'
-    pod 'Google/SignIn'
-    pod 'Firebase/Core'
+#    pod 'Alamofire'
+#    pod 'Google/SignIn'
+#    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
 
   target 'RideShareAppTests' do
     inherit! :search_paths
