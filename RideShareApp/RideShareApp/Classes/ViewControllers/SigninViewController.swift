@@ -12,14 +12,24 @@ import Firebase
 
 class SigninViewController: BaseViewController, GIDSignInUIDelegate {
     
+    @IBOutlet weak var btnSignout: GIDSignInButton!
+    @IBOutlet weak var btnSignin: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Google Signin
         
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
         
+        
+    }
+    
+    @IBAction func btnSigninTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func btnSignoutTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance().disconnect()
     }
     
     override func didReceiveMemoryWarning() {
