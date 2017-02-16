@@ -2,8 +2,8 @@
 //  RideShareAppUITests.swift
 //  RideShareAppUITests
 //
-//  Created by Mary on 15/02/17.
-//  Copyright © 2017 Tcs. All rights reserved.
+//  Created by Sravan on 15/02/17.
+//  
 //
 
 import XCTest
