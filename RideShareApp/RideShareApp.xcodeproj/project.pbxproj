@@ -26,6 +26,9 @@
 		A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
 		A0A594921E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
 		A0A594931E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
+		A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
+		A0A594971E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
+		A0A594981E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
 		A7CB17C23F0196D8FE721B3B /* Pods_RideShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3A9BF81FD2B7AE39E9BF81 /* Pods_RideShareApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,7 @@
 		A0A594891E54C007006CEFD5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0A594901E54C023006CEFD5 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		A0A594941E54C6DC006CEFD5 /* RideShareApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareApp.entitlements; sourceTree = "<group>"; };
+		A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseOperationsViewController.swift; sourceTree = "<group>"; };
 		C7B092A87EDF4391F17DCA33 /* Pods-RideShareAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareAppTests/Pods-RideShareAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3A9BF81FD2B7AE39E9BF81 /* Pods_RideShareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4709A084CF75E880BB5F9CB /* Pods-RideShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareApp/Pods-RideShareApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,8 +196,8 @@
 		A0A594861E54C007006CEFD5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A0A594871E54C007006CEFD5 /* AppDelegate.swift */,
 				A0A594881E54C007006CEFD5 /* ViewControllers */,
+				A0A594871E54C007006CEFD5 /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 		A0A594881E54C007006CEFD5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */,
 				A0A594901E54C023006CEFD5 /* SigninViewController.swift */,
 				A0A594891E54C007006CEFD5 /* BaseViewController.swift */,
 			);
@@ -499,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
+				A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
 				A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */,
 			);
@@ -509,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A594921E54C023006CEFD5 /* SigninViewController.swift in Sources */,
+				A0A594971E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				A0A5948B1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
 				A0A5948E1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
 				441590DF1E5463DD0015214F /* RideShareAppTests.swift in Sources */,
@@ -520,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A594931E54C023006CEFD5 /* SigninViewController.swift in Sources */,
+				A0A594981E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				A0A5948C1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
 				A0A5948F1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
 				441590EA1E5463DD0015214F /* RideShareAppUITests.swift in Sources */,
