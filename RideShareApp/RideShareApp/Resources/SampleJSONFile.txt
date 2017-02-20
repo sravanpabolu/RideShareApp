@@ -1,0 +1,43 @@
+{
+  "RideShareAppRootData": {
+    "Driver": {
+      "email_id_from_google_account": {
+        "Given_name": "John Smith",
+        "Contact_Number": "9988998898",
+        "Vehicle_Number": "",
+        "Vehicle_Model": "",
+        "Route_Name": "",
+        "Driver_Source": "",
+        "Driver_Destination": "",
+        "Completed_Rides": [
+          "Date_Time_VehicleNumber",
+          "Date_Time_VehicleNumber"
+        ],
+        "OpenRides": "Date_Time_VehicleNumber"
+      }
+    },
+    "Ride": {
+      "Ride_id_is_DateTime_VehicleNumber": {
+        "Ride_Start_point": "",
+        "Ride_End_Point": "",
+        "Ride_Start_Time": "",
+        "Route": "",
+        "Number_of_free_seats": "",
+        "Passenger_list": [
+          "passenger_id",
+          "passenger_id"
+        ]
+      }
+    },
+    "Passenger": {
+      "passenger_id_is_the_email": {
+        "Given_Name": "",
+        "Contact_number": "",
+        "Gender": "",
+        "Completed_rides": [
+          "Date_Time_VehicleNumber"
+        ]
+      }
+    }
+  }
+}
