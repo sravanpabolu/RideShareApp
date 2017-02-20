@@ -1,42 +1,39 @@
 {
   "RideShareAppRootData": {
-    "Driver": {
-      "email_id_from_google_account": {
-        "Given_name": "John Smith",
-        "Contact_Number": "9988998898",
-        "Vehicle_Number": "",
-        "Vehicle_Model": "",
-        "Route_Name": "",
-        "Driver_Source": "",
-        "Driver_Destination": "",
-        "Completed_Rides": [
-          "Date_Time_VehicleNumber",
-          "Date_Time_VehicleNumber"
-        ],
-        "OpenRides": "Date_Time_VehicleNumber"
-      }
-    },
     "Ride": {
       "Ride_id_is_DateTime_VehicleNumber": {
-        "Ride_Start_point": "",
-        "Ride_End_Point": "",
-        "Ride_Start_Time": "",
-        "Route": "",
-        "Number_of_free_seats": "",
-        "Passenger_list": [
-          "passenger_id",
-          "passenger_id"
-        ]
+        "isDriver": true,
+        "Ride_Start_point": "Siruseri",
+        "Ride_End_Point": "Kandanchavadi",
+        "Ride_Start_Time": "7:00PM",
+        "Ride_end_Time": "8:00PM",
+        "driver_details": {
+          "driver_id": "user_email",
+          "driver_source": "Siruseri",
+          "driver_destination": "Adyar",
+          "Number_of_free_seats": 2,
+          "route_name": "ECR",
+          "Vehicle_Number": "TN 11 Y 2334",
+          "Vehicle_Model": "Honda City",
+          "Passenger_list": [
+            "user_email",
+            "user_email"
+          ]
+        }
       }
     },
-    "Passenger": {
-      "passenger_id_is_the_email": {
-        "Given_Name": "",
-        "Contact_number": "",
-        "Gender": "",
-        "Completed_rides": [
-          "Date_Time_VehicleNumber"
-        ]
+    "User": {
+      "user_id_is_the_email": {
+        "Given_Name": "John Smith",
+        "Contact_number": 9988998898,
+        "Gender": "Male",
+        "Ride_History": {
+          "Open_Ride": "Ride_id_is_DateTime_VehicleNumber",
+          "Completed_rides": [
+            "Ride_id_is_DateTime_VehicleNumber",
+            "Ride_id_is_DateTime_VehicleNumber"
+          ]
+        }
       }
     }
   }
