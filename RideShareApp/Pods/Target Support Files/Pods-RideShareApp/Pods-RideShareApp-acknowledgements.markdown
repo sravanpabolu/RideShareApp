@@ -33,9 +33,21 @@ Copyright 2015 Google Inc.
 
 Copyright 2015 Google Inc.
 
+## GoogleMaps
+
+Copyright 2017 Google
+
 ## GoogleNetworkingUtilities
 
 Copyright 2015 Google Inc.
+
+## GooglePlacePicker
+
+Copyright 2017 Google
+
+## GooglePlaces
+
+Copyright 2017 Google
 
 ## GoogleSignIn
 
