@@ -93,7 +93,8 @@
 - (void)tableDataSource:(GMSAutocompleteTableDataSource *)tableDataSource
     didAutocompleteWithPlace:(GMSPlace *)place {
   [_searchField resignFirstResponder];
-  [self autocompleteDidSelectPlace:place];
+#warning - uncomment this, if you need to show the results in the text field
+//  [self autocompleteDidSelectPlace:place];
   _searchField.text = place.name;
 }
 
