@@ -24,6 +24,15 @@ class DatabaseOperationsViewController: BaseViewController {
     }
     
     //MARK:
+    //MARK: should remove the following method.
+    //MARK:
+    
+    @IBAction func btnPlacesTapped(_ sender: Any) {
+        let textFieldAutoComplete = AutocompleteWithTextFieldController()
+        present(textFieldAutoComplete, animated: true, completion: nil);
+    }
+      
+    //MARK:
     //MARK: Button action methods
     @IBAction func btnCreateTapped(_ sender: Any) {
         self.dbRef.child("User 1").setValue(["First Name" : "Sravan"])

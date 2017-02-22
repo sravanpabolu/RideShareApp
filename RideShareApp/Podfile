@@ -6,13 +6,16 @@ target 'RideShareApp' do
   use_frameworks!
 
   # Pods for RideShareApp
-#    pod 'Alamofire'
-#    pod 'Google/SignIn'
-#    pod 'Firebase/Core'
+    #For Signin
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+    #For DB
     pod 'Firebase/Database'
-
+    #For Autocomplete textbox and maps
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'GoogleMaps'
+    
   target 'RideShareAppTests' do
     inherit! :search_paths
     # Pods for testing

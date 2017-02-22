@@ -9,6 +9,7 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -19,11 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //For Firebase
         FIRApp.configure()
         
         //For Signin
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
+        //For Google Places
+        GMSPlacesClient.provideAPIKey("AIzaSyCR6zbxYZLAstY5NSwUJiQ--kE9Rv8G9FI")
         
         return true
     }

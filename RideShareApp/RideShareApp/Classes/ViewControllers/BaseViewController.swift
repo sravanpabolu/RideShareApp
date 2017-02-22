@@ -10,6 +10,14 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+//    init() {
+//        super.init()
+//    }
+    
+    required init(coder: NSCoder) {
+        super.init(coder: coder)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
