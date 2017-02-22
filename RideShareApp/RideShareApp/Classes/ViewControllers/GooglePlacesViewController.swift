@@ -50,12 +50,17 @@ class GooglePlacesViewController: BaseViewController, GMSAutocompleteTableDataSo
         self.view.addSubview(self.searchField)
         
         let searchFieldView = ["searchFieldView" : self.searchField]
-        let searchFieldConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[_searchField]-|",
+        let searchFieldConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[searchFieldView]-(10)-|",
                                                                    options: NSLayoutFormatOptions(rawValue: 0),
                                                                    metrics: nil,
                                                                    views: searchFieldView)
-        
+//        let searchFieldVConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(10)-[searchFieldView]-(10)-|",
+//                                                                   options: NSLayoutFormatOptions(rawValue: 0),
+//                                                                   metrics: nil,
+//                                                                   views: searchFieldView)
         self.view.addConstraints(searchFieldConstraint)
+//        self.view.addConstraints(searchFieldVConstraint)
+        
         
         let searchFieldConstraintBottom = NSLayoutConstraint(item: self.searchField,
                                                              attribute: NSLayoutAttribute.top,
@@ -63,7 +68,7 @@ class GooglePlacesViewController: BaseViewController, GMSAutocompleteTableDataSo
                                                              toItem: self.topLayoutGuide,
                                                              attribute: NSLayoutAttribute.bottom,
                                                              multiplier: 1,
-                                                             constant: 8)
+                                                             constant: 10)
         self.view.addConstraint(searchFieldConstraintBottom)
         
         self.addResultViewBelow(view: self.searchField)
@@ -79,7 +84,7 @@ class GooglePlacesViewController: BaseViewController, GMSAutocompleteTableDataSo
     }
     
     func autoCompleteDidSelectPlace(place: GMSPlace) {
-        var text:NSMutableAttributedString = NSMutableAttributedString(string: place.description)
+        let text:NSMutableAttributedString = NSMutableAttributedString(string: place.description)
         if (place.attributions != nil) {
             text.append(NSAttributedString(string: "\n\n"))
             text.append(place.attributions!)
@@ -128,27 +133,21 @@ class GooglePlacesViewController: BaseViewController, GMSAutocompleteTableDataSo
         
         //layout it out below the textfield using autolayout
         
-//        var viewBindingsDict: NSMutableDictionary = NSMutableDictionary()
-//        viewBindingsDict.setValue(fooView, forKey: "fooView")
-//        viewBindingsDict.setValue(barView, forKey: "barView")
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[fooView]-[barView]-|", options: nil, metrics: nil, views: viewBindingsDict))
-    
-        
-        var bothViews: NSMutableDictionary = NSMutableDictionary()
-        bothViews.setValue(self.searchField, forKey: "aSearchFieldView")
-        bothViews.setValue(self.resultsController.view, forKey: "aResultView")
-        let aConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:[_searchField]-[resultView]-(0)-|",
-                                                                   options: NSLayoutFormatOptions(rawValue: 0),
-                                                                   metrics: nil,
-                                                                   views: bothViews
-                                                        )
+
+        var bothViews = [String: Any]()
+        bothViews.updateValue(self.searchField, forKey: "aSearchFieldView")
+        bothViews.updateValue(self.resultsController.view, forKey: "aResultView")
+        let aConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(10)-[aSearchFieldView]-[aResultView]-(10)-|",
+                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         metrics: nil,
+                                                         views: bothViews
+        )
         self.view.addConstraints(aConstraint)
         
-        let anotherResultView = ["anotherResultView" : self.resultsController.view]
-        let anotherConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[resultView]-(0)-|",
+        let anotherConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[aResultView]-(10)-|",
                                                                options: NSLayoutFormatOptions(rawValue: 0),
                                                                metrics: nil,
-                                                               views: anotherResultView)
+                                                               views: bothViews)
         self.view.addConstraints(anotherConstraint)
         
         //do a force layout

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B0FD5C21E5C4709002545CB /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FD5C11E5C4709002545CB /* GooglePlacesViewController.swift */; };
+		1B81D0ED1E5DA8CF00083182 /* AutocompleteBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0E81E5DA8CF00083182 /* AutocompleteBaseViewController.m */; };
+		1B81D0EE1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0EA1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m */; };
+		1B81D0EF1E5DA8CF00083182 /* BaseDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0EC1E5DA8CF00083182 /* BaseDemoViewController.m */; };
 		38A345EF13FE4544F55023E1 /* Pods_RideShareAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926A4FB03A1DA5BF92BBD515 /* Pods_RideShareAppTests.framework */; };
 		3DA3D3367267DE02F97713E1 /* Pods_RideShareAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B21696EA5375835593AF3 /* Pods_RideShareAppUITests.framework */; };
 		441590CF1E5463DC0015214F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590CD1E5463DC0015214F /* Main.storyboard */; };
@@ -52,7 +54,12 @@
 
 /* Begin PBXFileReference section */
 		0E692265358BB74486E20E01 /* Pods-RideShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareApp/Pods-RideShareApp.release.xcconfig"; sourceTree = "<group>"; };
-		1B0FD5C11E5C4709002545CB /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
+		1B81D0E71E5DA8CF00083182 /* AutocompleteBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompleteBaseViewController.h; sourceTree = "<group>"; };
+		1B81D0E81E5DA8CF00083182 /* AutocompleteBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutocompleteBaseViewController.m; sourceTree = "<group>"; };
+		1B81D0E91E5DA8CF00083182 /* AutocompleteWithTextFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompleteWithTextFieldController.h; sourceTree = "<group>"; };
+		1B81D0EA1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutocompleteWithTextFieldController.m; sourceTree = "<group>"; };
+		1B81D0EB1E5DA8CF00083182 /* BaseDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDemoViewController.h; sourceTree = "<group>"; };
+		1B81D0EC1E5DA8CF00083182 /* BaseDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDemoViewController.m; sourceTree = "<group>"; };
 		231ED9015531AC78A22DC92F /* Pods-RideShareAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareAppTests/Pods-RideShareAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		32F926EF70F15B8CEA6BD22E /* Pods-RideShareAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareAppUITests/Pods-RideShareAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C865F03577C1CDD2EF4A6D7 /* Pods-RideShareAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareAppUITests/Pods-RideShareAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +116,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B81D0E61E5DA8CF00083182 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1B81D0E71E5DA8CF00083182 /* AutocompleteBaseViewController.h */,
+				1B81D0E81E5DA8CF00083182 /* AutocompleteBaseViewController.m */,
+				1B81D0E91E5DA8CF00083182 /* AutocompleteWithTextFieldController.h */,
+				1B81D0EA1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m */,
+				1B81D0EB1E5DA8CF00083182 /* BaseDemoViewController.h */,
+				1B81D0EC1E5DA8CF00083182 /* BaseDemoViewController.m */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		2A66C3624BCBBB73BEAD55FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +227,7 @@
 		A0A594881E54C007006CEFD5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B0FD5C11E5C4709002545CB /* GooglePlacesViewController.swift */,
+				1B81D0E61E5DA8CF00083182 /* Dependencies */,
 				A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */,
 				A0A594901E54C023006CEFD5 /* SigninViewController.swift */,
 				A0A594891E54C007006CEFD5 /* BaseViewController.swift */,
@@ -506,8 +526,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B81D0EE1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m in Sources */,
+				1B81D0ED1E5DA8CF00083182 /* AutocompleteBaseViewController.m in Sources */,
+				1B81D0EF1E5DA8CF00083182 /* BaseDemoViewController.m in Sources */,
 				A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
-				1B0FD5C21E5C4709002545CB /* GooglePlacesViewController.swift in Sources */,
 				A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
 				A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */,
