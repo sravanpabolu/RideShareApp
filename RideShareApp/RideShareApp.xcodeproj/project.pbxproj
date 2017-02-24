@@ -187,6 +187,7 @@
 				441590D21E5463DC0015214F /* LaunchScreen.storyboard */,
 				441590D51E5463DC0015214F /* Info.plist */,
 				441590F71E54679A0015214F /* RideShareApp-Bridging-Header.h */,
+				1B81D0F51E5EF66800083182 /* RideShareApp.storyboard */,
 			);
 			path = RideShareApp;
 			sourceTree = "<group>";
@@ -375,6 +376,7 @@
 				441590D41E5463DC0015214F /* LaunchScreen.storyboard in Resources */,
 				A0A5947F1E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */,
 				441590D11E5463DC0015214F /* Assets.xcassets in Resources */,
+				1B81D0F61E5EF66800083182 /* RideShareApp.storyboard in Resources */,
 				441590CF1E5463DC0015214F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,12 +543,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B81D0EE1E5DA8CF00083182 /* AutocompleteWithTextFieldController.m in Sources */,
+				1B81D0FC1E5EF79100083182 /* BookRideViewController.swift in Sources */,
+				1B81D0FE1E5EF7D100083182 /* GoRideViewController.swift in Sources */,
 				1B81D0ED1E5DA8CF00083182 /* AutocompleteBaseViewController.m in Sources */,
 				1B81D0EF1E5DA8CF00083182 /* BaseDemoViewController.m in Sources */,
+				1B81D0F81E5EF6BA00083182 /* HomeViewController.swift in Sources */,
+				1B81D1041E60369E00083182 /* MyRidesViewController.swift in Sources */,
 				A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
 				1B81D0F41E5EEE3500083182 /* MapDataManager.swift in Sources */,
 				A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
+				1B81D0FA1E5EF71300083182 /* UserProfileViewController.swift in Sources */,
+				1B81D1021E5EF7FC00083182 /* AboutViewController.swift in Sources */,
+				1B81D1061E60484300083182 /* RouteListViewController.swift in Sources */,
 				A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */,
 				1B81D0F11E5EEDFC00083182 /* MapViewController.swift in Sources */,
 			);
