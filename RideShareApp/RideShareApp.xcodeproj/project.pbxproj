@@ -21,47 +21,16 @@
 		1B81D1021E5EF7FC00083182 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D1011E5EF7FC00083182 /* AboutViewController.swift */; };
 		1B81D1041E60369E00083182 /* MyRidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D1031E60369E00083182 /* MyRidesViewController.swift */; };
 		1B81D1061E60484300083182 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D1051E60484300083182 /* RouteListViewController.swift */; };
-		38A345EF13FE4544F55023E1 /* Pods_RideShareAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926A4FB03A1DA5BF92BBD515 /* Pods_RideShareAppTests.framework */; };
-		3DA3D3367267DE02F97713E1 /* Pods_RideShareAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B21696EA5375835593AF3 /* Pods_RideShareAppUITests.framework */; };
 		441590CF1E5463DC0015214F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590CD1E5463DC0015214F /* Main.storyboard */; };
 		441590D11E5463DC0015214F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441590D01E5463DC0015214F /* Assets.xcassets */; };
 		441590D41E5463DC0015214F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590D21E5463DC0015214F /* LaunchScreen.storyboard */; };
-		441590DF1E5463DD0015214F /* RideShareAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441590DE1E5463DD0015214F /* RideShareAppTests.swift */; };
-		441590EA1E5463DD0015214F /* RideShareAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441590E91E5463DD0015214F /* RideShareAppUITests.swift */; };
 		A0A5947F1E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */; };
-		A0A594801E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */; };
-		A0A594811E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */; };
 		A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594871E54C007006CEFD5 /* AppDelegate.swift */; };
-		A0A5948B1E54C007006CEFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594871E54C007006CEFD5 /* AppDelegate.swift */; };
-		A0A5948C1E54C007006CEFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594871E54C007006CEFD5 /* AppDelegate.swift */; };
 		A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594891E54C007006CEFD5 /* BaseViewController.swift */; };
-		A0A5948E1E54C007006CEFD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594891E54C007006CEFD5 /* BaseViewController.swift */; };
-		A0A5948F1E54C007006CEFD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594891E54C007006CEFD5 /* BaseViewController.swift */; };
 		A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
-		A0A594921E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
-		A0A594931E54C023006CEFD5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594901E54C023006CEFD5 /* SigninViewController.swift */; };
 		A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
-		A0A594971E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
-		A0A594981E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594951E55EE53006CEFD5 /* DatabaseOperationsViewController.swift */; };
 		A7CB17C23F0196D8FE721B3B /* Pods_RideShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3A9BF81FD2B7AE39E9BF81 /* Pods_RideShareApp.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		441590DB1E5463DD0015214F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 441590BE1E5463DC0015214F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 441590C51E5463DC0015214F;
-			remoteInfo = RideShareApp;
-		};
-		441590E61E5463DD0015214F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 441590BE1E5463DC0015214F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 441590C51E5463DC0015214F;
-			remoteInfo = RideShareApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E692265358BB74486E20E01 /* Pods-RideShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareApp/Pods-RideShareApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,12 +59,6 @@
 		441590D01E5463DC0015214F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441590D31E5463DC0015214F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441590D51E5463DC0015214F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		441590DA1E5463DD0015214F /* RideShareAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RideShareAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		441590DE1E5463DD0015214F /* RideShareAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideShareAppTests.swift; sourceTree = "<group>"; };
-		441590E01E5463DD0015214F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		441590E51E5463DD0015214F /* RideShareAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RideShareAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		441590E91E5463DD0015214F /* RideShareAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideShareAppUITests.swift; sourceTree = "<group>"; };
-		441590EB1E5463DD0015214F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441590F71E54679A0015214F /* RideShareApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RideShareApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		926A4FB03A1DA5BF92BBD515 /* Pods_RideShareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -116,22 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7CB17C23F0196D8FE721B3B /* Pods_RideShareApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		441590D71E5463DD0015214F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38A345EF13FE4544F55023E1 /* Pods_RideShareAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		441590E21E5463DD0015214F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DA3D3367267DE02F97713E1 /* Pods_RideShareAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				441590C81E5463DC0015214F /* RideShareApp */,
-				441590DD1E5463DD0015214F /* RideShareAppTests */,
-				441590E81E5463DD0015214F /* RideShareAppUITests */,
 				441590C71E5463DC0015214F /* Products */,
 				2A66C3624BCBBB73BEAD55FA /* Pods */,
 				61D6CAE058B8FD545625FAB6 /* Frameworks */,
@@ -188,8 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				441590C61E5463DC0015214F /* RideShareApp.app */,
-				441590DA1E5463DD0015214F /* RideShareAppTests.xctest */,
-				441590E51E5463DD0015214F /* RideShareAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,24 +151,6 @@
 				1B81D0F51E5EF66800083182 /* RideShareApp.storyboard */,
 			);
 			path = RideShareApp;
-			sourceTree = "<group>";
-		};
-		441590DD1E5463DD0015214F /* RideShareAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				441590DE1E5463DD0015214F /* RideShareAppTests.swift */,
-				441590E01E5463DD0015214F /* Info.plist */,
-			);
-			path = RideShareAppTests;
-			sourceTree = "<group>";
-		};
-		441590E81E5463DD0015214F /* RideShareAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				441590E91E5463DD0015214F /* RideShareAppUITests.swift */,
-				441590EB1E5463DD0015214F /* Info.plist */,
-			);
-			path = RideShareAppUITests;
 			sourceTree = "<group>";
 		};
 		61D6CAE058B8FD545625FAB6 /* Frameworks */ = {
@@ -299,48 +224,6 @@
 			productReference = 441590C61E5463DC0015214F /* RideShareApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		441590D91E5463DD0015214F /* RideShareAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 441590F11E5463DD0015214F /* Build configuration list for PBXNativeTarget "RideShareAppTests" */;
-			buildPhases = (
-				CDFC94FBA97D504E5521F7E5 /* [CP] Check Pods Manifest.lock */,
-				441590D61E5463DD0015214F /* Sources */,
-				441590D71E5463DD0015214F /* Frameworks */,
-				441590D81E5463DD0015214F /* Resources */,
-				95E24447CFDB5284BA619BEB /* [CP] Embed Pods Frameworks */,
-				F7C3CC021F7222E5D3FF8642 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				441590DC1E5463DD0015214F /* PBXTargetDependency */,
-			);
-			name = RideShareAppTests;
-			productName = RideShareAppTests;
-			productReference = 441590DA1E5463DD0015214F /* RideShareAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		441590E41E5463DD0015214F /* RideShareAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 441590F41E5463DD0015214F /* Build configuration list for PBXNativeTarget "RideShareAppUITests" */;
-			buildPhases = (
-				8D1348F9D403E7C52B1C3C53 /* [CP] Check Pods Manifest.lock */,
-				441590E11E5463DD0015214F /* Sources */,
-				441590E21E5463DD0015214F /* Frameworks */,
-				441590E31E5463DD0015214F /* Resources */,
-				99AE741207C835F0107FB535 /* [CP] Embed Pods Frameworks */,
-				13B66203DA64E867D018B7C6 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				441590E71E5463DD0015214F /* PBXTargetDependency */,
-			);
-			name = RideShareAppUITests;
-			productName = RideShareAppUITests;
-			productReference = 441590E51E5463DD0015214F /* RideShareAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,16 +245,6 @@
 							};
 						};
 					};
-					441590D91E5463DD0015214F = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 441590C51E5463DC0015214F;
-					};
-					441590E41E5463DD0015214F = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 441590C51E5463DC0015214F;
-					};
 				};
 			};
 			buildConfigurationList = 441590C11E5463DC0015214F /* Build configuration list for PBXProject "RideShareApp" */;
@@ -388,8 +261,6 @@
 			projectRoot = "";
 			targets = (
 				441590C51E5463DC0015214F /* RideShareApp */,
-				441590D91E5463DD0015214F /* RideShareAppTests */,
-				441590E41E5463DD0015214F /* RideShareAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -407,40 +278,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		441590D81E5463DD0015214F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A594801E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		441590E31E5463DD0015214F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A594811E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13B66203DA64E867D018B7C6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideShareAppUITests/Pods-RideShareAppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		486098045A44DC24E3168199 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,81 +326,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8D1348F9D403E7C52B1C3C53 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		95E24447CFDB5284BA619BEB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideShareAppTests/Pods-RideShareAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99AE741207C835F0107FB535 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideShareAppUITests/Pods-RideShareAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CDFC94FBA97D504E5521F7E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F7C3CC021F7222E5D3FF8642 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideShareAppTests/Pods-RideShareAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -588,44 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		441590D61E5463DD0015214F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A594921E54C023006CEFD5 /* SigninViewController.swift in Sources */,
-				A0A594971E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
-				A0A5948B1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
-				A0A5948E1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
-				441590DF1E5463DD0015214F /* RideShareAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		441590E11E5463DD0015214F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A594931E54C023006CEFD5 /* SigninViewController.swift in Sources */,
-				A0A594981E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
-				A0A5948C1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
-				A0A5948F1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
-				441590EA1E5463DD0015214F /* RideShareAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		441590DC1E5463DD0015214F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 441590C51E5463DC0015214F /* RideShareApp */;
-			targetProxy = 441590DB1E5463DD0015214F /* PBXContainerItemProxy */;
-		};
-		441590E71E5463DD0015214F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 441590C51E5463DC0015214F /* RideShareApp */;
-			targetProxy = 441590E61E5463DD0015214F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		441590CD1E5463DC0015214F /* Main.storyboard */ = {
@@ -775,64 +503,6 @@
 			};
 			name = Release;
 		};
-		441590F21E5463DD0015214F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7B092A87EDF4391F17DCA33 /* Pods-RideShareAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RideShareAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.RideShareAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RideShareApp.app/RideShareApp";
-			};
-			name = Debug;
-		};
-		441590F31E5463DD0015214F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 231ED9015531AC78A22DC92F /* Pods-RideShareAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RideShareAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.RideShareAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RideShareApp.app/RideShareApp";
-			};
-			name = Release;
-		};
-		441590F51E5463DD0015214F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C865F03577C1CDD2EF4A6D7 /* Pods-RideShareAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RideShareAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.RideShareAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = RideShareApp;
-			};
-			name = Debug;
-		};
-		441590F61E5463DD0015214F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32F926EF70F15B8CEA6BD22E /* Pods-RideShareAppUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RideShareAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.RideShareAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = RideShareApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -850,24 +520,6 @@
 			buildConfigurations = (
 				441590EF1E5463DD0015214F /* Debug */,
 				441590F01E5463DD0015214F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		441590F11E5463DD0015214F /* Build configuration list for PBXNativeTarget "RideShareAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				441590F21E5463DD0015214F /* Debug */,
-				441590F31E5463DD0015214F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		441590F41E5463DD0015214F /* Build configuration list for PBXNativeTarget "RideShareAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				441590F51E5463DD0015214F /* Debug */,
-				441590F61E5463DD0015214F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
