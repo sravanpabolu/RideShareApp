@@ -135,6 +135,14 @@
                                     <action selector="btnPlacesTapped:" destination="sOP-6W-syb" eventType="touchUpInside" id="qes-K3-u3p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-YJ-dqZ">
+                                <rect key="frame" x="118" y="256" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Maps"/>
+                                <connections>
+                                    <segue destination="XJg-e2-Dgw" kind="show" id="FPA-tu-FoE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -142,6 +150,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOG-AJ-mFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-914" y="31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qgM-oh-IIr">
+            <objects>
+                <navigationController id="XJg-e2-Dgw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XR1-cI-WCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k1j-LF-Ihn" kind="relationship" relationship="rootViewController" id="vIU-cJ-ln7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHJ-aL-ScO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="809"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="jHf-EW-fEJ">
+            <objects>
+                <viewController id="k1j-LF-Ihn" customClass="MapViewController" customModule="RideShareApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IA9-Jf-eIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yvz-Up-eJg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="70C-Pi-IAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-aY-hG9" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="98" width="343" height="549"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Vm-HR-3Nv"/>
+                    <connections>
+                        <outlet property="mapView" destination="eOk-aY-hG9" id="dHJ-Sl-7dS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKB-85-uXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="825.33733133433293"/>
         </scene>
     </scenes>
 </document>
