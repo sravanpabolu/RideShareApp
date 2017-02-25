@@ -46,7 +46,7 @@
   [self.view addSubview:button];
   // Position the button from the top of the view.
   [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
-                                                         attribute:NSLayoutAttributeTop
+                                                        attribute:NSLayoutAttributeTop
                                                         relatedBy:NSLayoutRelationEqual
                                                            toItem:self.topLayoutGuide
                                                         attribute:NSLayoutAttributeBottom

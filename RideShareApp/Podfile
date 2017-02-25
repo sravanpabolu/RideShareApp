@@ -15,15 +15,5 @@ target 'RideShareApp' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
-    
-  target 'RideShareAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'RideShareAppUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
