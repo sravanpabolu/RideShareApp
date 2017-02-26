@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class DatabaseManager: NSObject {
     var dbRef: FIRDatabaseReference!
-    
+    let rootNode: String = "RideShareAppData"
     override init() {
         super.init()
         dbRef = FIRDatabase.database().reference()
@@ -30,7 +30,7 @@ class DatabaseManager: NSObject {
             "Vehicle Destination" : user.userVehicle.vehicleDestination as Any
         ] as [String : Any]
         
-        dbRef.child("RideShareAppData").setValue(userData, withCompletionBlock: { (error: Error?, ref:FIRDatabaseReference!) in
+        dbRef.child(rootNode).setValue(userData, withCompletionBlock: { (error: Error?, ref:FIRDatabaseReference!) in
             print("User data Created")
             
             if let error = error {
