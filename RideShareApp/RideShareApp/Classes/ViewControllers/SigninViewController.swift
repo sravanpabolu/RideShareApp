@@ -31,6 +31,7 @@ class SigninViewController: BaseViewController, GIDSignInUIDelegate {
     //this method is called, after user sign in completes.
     func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
         if let name = User.sharedInstance.userName {
+        //TODO: Should remove the following statement and modify the text in the text view accordingly.
             txtFieldIntroduction.text = "Hello \(name)"
         }
     }

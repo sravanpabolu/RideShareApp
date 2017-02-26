@@ -3,7 +3,7 @@
 //  RideShareApp
 //
 //  Created by Kanya Rajan on 2/20/17.
-//  Copyright © 2017 Tcs. All rights reserved.
+//  
 //
 
 import UIKit
