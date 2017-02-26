@@ -3,7 +3,7 @@
 //  RideShareApp
 //
 //  Created by Sravan on 15/02/17.
-//  Copyright © 2017 Tcs. All rights reserved.
+//  
 //
 
 import Foundation
@@ -12,29 +12,32 @@ import Firebase
 
 class SigninViewController: BaseViewController, GIDSignInUIDelegate {
     
-    @IBOutlet weak var btnSignout: GIDSignInButton!
-    @IBOutlet weak var btnSignin: GIDSignInButton!
+//    @IBOutlet weak var btnSignout: GIDSignInButton!
+//    @IBOutlet weak var btnSignin: GIDSignInButton!
+    
+    @IBOutlet weak var txtFieldIntroduction: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Google Signin
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
-        
+        GIDSignIn.sharedInstance().uiDelegate = self 
     }
     
-    @IBAction func btnSigninTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
-    @IBAction func btnSignoutTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance().disconnect()
+    //this method is called, after user sign in completes.
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+        if let name = User.sharedInstance.userName {
+            txtFieldIntroduction.text = "Hello \(name)"
+        }
     }
     
-    @IBAction func btnBackTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func btnSignoutTapped(_ sender: Any) {
+//        GIDSignIn.sharedInstance().disconnect()
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

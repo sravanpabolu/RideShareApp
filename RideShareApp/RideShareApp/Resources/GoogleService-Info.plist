@@ -7,19 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>929451224716-kva37sa7l7bkclr47v1so9f800i60kde.apps.googleusercontent.com</string>
+	<string>1017432840717-6bc12amgkese0163du4tlufpdc1gg2tr.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.929451224716-kva37sa7l7bkclr47v1so9f800i60kde</string>
+	<string>com.googleusercontent.apps.1017432840717-6bc12amgkese0163du4tlufpdc1gg2tr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDzFoCWnvG4BVuyL9cFZoZhjJf8snyV-aA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>929451224716</string>
+	<string>1017432840717</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.hackathon.RideShareApp</string>
 	<key>PROJECT_ID</key>
-	<string>rideshareapp-4ed96</string>
+	<string>rideshare-app-159409</string>
 	<key>STORAGE_BUCKET</key>
-	<string>rideshareapp-4ed96.appspot.com</string>
+	<string>rideshare-app-159409.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:929451224716:ios:7a8e78502769b0e9</string>
+	<string>1:1017432840717:ios:7a8e78502769b0e9</string>
 	<key>DATABASE_URL</key>
-	<string>https://rideshareapp-4ed96.firebaseio.com</string>
+	<string>https://rideshare-app-159409.firebaseio.com</string>
 </dict>
 </plist>

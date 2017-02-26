@@ -52,9 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let fullName = user.profile.name
 //        let givenName = user.profile.givenName
 //        let familyName = user.profile.familyName
-//        let email = user.profile.email
+        let email = user.profile.email
         
         print("User : \(fullName) signed in successfully")
+        
+        let user:User = User.sharedInstance
+        user.userName = fullName
+        user.userEmail = email
+        user.isUserSigninSuccess = true
+        
+        
     }
     
     
