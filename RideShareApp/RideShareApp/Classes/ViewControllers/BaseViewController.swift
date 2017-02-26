@@ -10,22 +10,20 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-//    init() {
-//        super.init()
-//    }
+    public func showActivityIndicator() {
+        
+    }
     
-    required init(coder: NSCoder) {
-        super.init(coder: coder)!
+    public func hideActivityIndicator() {
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
 
 
