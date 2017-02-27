@@ -12,7 +12,6 @@
 		1B81D0EF1E5DA8CF00083182 /* BaseDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0EC1E5DA8CF00083182 /* BaseDemoViewController.m */; };
 		1B81D0F11E5EEDFC00083182 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0F01E5EEDFC00083182 /* MapViewController.swift */; };
 		1B81D0F41E5EEE3500083182 /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0F31E5EEE3500083182 /* MapDataManager.swift */; };
-		1B81D0F61E5EF66800083182 /* RideShareApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B81D0F51E5EF66800083182 /* RideShareApp.storyboard */; };
 		1B81D0F81E5EF6BA00083182 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0F71E5EF6BA00083182 /* HomeViewController.swift */; };
 		1B81D0FA1E5EF71300083182 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0F91E5EF71300083182 /* UserProfileViewController.swift */; };
 		1B81D0FC1E5EF79100083182 /* BookRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D0FB1E5EF79100083182 /* BookRideViewController.swift */; };
@@ -24,6 +23,8 @@
 		441590CF1E5463DC0015214F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590CD1E5463DC0015214F /* Main.storyboard */; };
 		441590D11E5463DC0015214F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441590D01E5463DC0015214F /* Assets.xcassets */; };
 		441590D41E5463DC0015214F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590D21E5463DC0015214F /* LaunchScreen.storyboard */; };
+		A03166131E62CA2D00FC94FB /* RideShareApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03166111E62CA2D00FC94FB /* RideShareApp.storyboard */; };
+		A03166151E63461900FC94FB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03166141E63461900FC94FB /* DatabaseManager.swift */; };
 		A0A5947F1E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */; };
 		A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594871E54C007006CEFD5 /* AppDelegate.swift */; };
 		A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594891E54C007006CEFD5 /* BaseViewController.swift */; };
@@ -45,7 +46,6 @@
 		1B81D0EC1E5DA8CF00083182 /* BaseDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDemoViewController.m; sourceTree = "<group>"; };
 		1B81D0F01E5EEDFC00083182 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Dependencies/MapViewController.swift; sourceTree = "<group>"; };
 		1B81D0F31E5EEE3500083182 /* MapDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
-		1B81D0F51E5EF66800083182 /* RideShareApp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RideShareApp.storyboard; sourceTree = "<group>"; };
 		1B81D0F71E5EF6BA00083182 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B81D0F91E5EF71300083182 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		1B81D0FB1E5EF79100083182 /* BookRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRideViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		441590D51E5463DC0015214F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441590F71E54679A0015214F /* RideShareApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RideShareApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		926A4FB03A1DA5BF92BBD515 /* Pods_RideShareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03166121E62CA2D00FC94FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RideShareApp.storyboard; sourceTree = "<group>"; };
+		A03166141E63461900FC94FB /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Classes/DataManager/DatabaseManager.swift; sourceTree = "<group>"; };
 		A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0A594871E54C007006CEFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0A594891E54C007006CEFD5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -146,15 +148,13 @@
 		441590C81E5463DC0015214F /* RideShareApp */ = {
 			isa = PBXGroup;
 			children = (
+				A03166101E62CA1300FC94FB /* StoryBoards */,
 				A0A594941E54C6DC006CEFD5 /* RideShareApp.entitlements */,
 				A0A5947D1E54BE04006CEFD5 /* Resources */,
 				A0A594861E54C007006CEFD5 /* Classes */,
-				441590CD1E5463DC0015214F /* Main.storyboard */,
 				441590D01E5463DC0015214F /* Assets.xcassets */,
-				441590D21E5463DC0015214F /* LaunchScreen.storyboard */,
 				441590D51E5463DC0015214F /* Info.plist */,
 				441590F71E54679A0015214F /* RideShareApp-Bridging-Header.h */,
-				1B81D0F51E5EF66800083182 /* RideShareApp.storyboard */,
 			);
 			path = RideShareApp;
 			sourceTree = "<group>";
@@ -167,6 +167,17 @@
 				F31B21696EA5375835593AF3 /* Pods_RideShareAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A03166101E62CA1300FC94FB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				A03166111E62CA2D00FC94FB /* RideShareApp.storyboard */,
+				A03166141E63461900FC94FB /* DatabaseManager.swift */,
+				441590CD1E5463DC0015214F /* Main.storyboard */,
+				441590D21E5463DC0015214F /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 		A0A5947D1E54BE04006CEFD5 /* Resources */ = {
@@ -290,7 +301,7 @@
 				441590D41E5463DC0015214F /* LaunchScreen.storyboard in Resources */,
 				A0A5947F1E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */,
 				441590D11E5463DC0015214F /* Assets.xcassets in Resources */,
-				1B81D0F61E5EF66800083182 /* RideShareApp.storyboard in Resources */,
+				A03166131E62CA2D00FC94FB /* RideShareApp.storyboard in Resources */,
 				441590CF1E5463DC0015214F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +381,7 @@
 				1B81D1061E60484300083182 /* RouteListViewController.swift in Sources */,
 				A0A594911E54C023006CEFD5 /* SigninViewController.swift in Sources */,
 				1B81D0F11E5EEDFC00083182 /* MapViewController.swift in Sources */,
+				A03166151E63461900FC94FB /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +402,14 @@
 				441590D31E5463DC0015214F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A03166111E62CA2D00FC94FB /* RideShareApp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A03166121E62CA2D00FC94FB /* Base */,
+			);
+			name = RideShareApp.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

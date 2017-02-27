@@ -18,8 +18,8 @@ class User: NSObject {
     //TODO: Do we need this statement ?
     public var isUserSigninSuccess:Bool?
     
-    public var userVehicle:Vehicle?
-    public var userRides:Rides?
+    public var userVehicle:Vehicle = Vehicle()
+    public var userRides:Rides = Rides()
     
     public static var sharedInstance = User()
     
