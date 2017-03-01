@@ -48,13 +48,17 @@ class DatabaseManager: NSObject {
          */
         
         
-        dbRef.child(rootNode).child(userNode).child(user.userEmail!).setValue(userData, withCompletionBlock: { (error: Error?, ref:FIRDatabaseReference!) in
-            print("User data Created")
-            
-            if let error = error {
-                print("Error: while creating data in DB : \(error.localizedDescription)")
+        dbRef.child(rootNode)
+            .child(userNode)
+            .child(user.userEmail!)
+            .setValue(userData, withCompletionBlock:
+                { (error: Error?, ref:FIRDatabaseReference!) in
+                    print("User data Created")
+                    
+                    if let error = error {
+                        print("Error: while creating data in DB : \(error.localizedDescription)")
+                    }
             }
-        }
 
         
 //        dbRef.child(rootNode).setValue(userData, withCompletionBlock: { (error: Error?, ref:FIRDatabaseReference!) in

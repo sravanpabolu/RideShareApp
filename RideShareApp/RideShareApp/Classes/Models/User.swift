@@ -15,9 +15,6 @@ class User: NSObject {
     public var userGender:String?
     public var userContactNumber:IntMax?
     
-    //TODO: Do we need this statement ?
-    public var isUserSigninSuccess:Bool?
-    
     public var userVehicle:Vehicle = Vehicle()
     public var userRides:Rides = Rides()
     
