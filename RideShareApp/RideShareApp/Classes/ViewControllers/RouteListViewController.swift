@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class RouteListViewController: BaseViewController {
+    
+    var strSource: String?
+    var strDestination: String?
+    var iNumberOfSeats: Int?
+    var dtBookingDate: Date?
+    let mapDataManager = MapDataManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
