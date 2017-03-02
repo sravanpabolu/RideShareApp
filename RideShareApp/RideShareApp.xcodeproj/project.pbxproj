@@ -25,6 +25,7 @@
 		441590D41E5463DC0015214F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441590D21E5463DC0015214F /* LaunchScreen.storyboard */; };
 		A03166131E62CA2D00FC94FB /* RideShareApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03166111E62CA2D00FC94FB /* RideShareApp.storyboard */; };
 		A03166151E63461900FC94FB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03166141E63461900FC94FB /* DatabaseManager.swift */; };
+		A036B6FB1E68660400C6A153 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036B6FA1E68660400C6A153 /* Utils.swift */; };
 		A0A5947F1E54BE04006CEFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */; };
 		A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594871E54C007006CEFD5 /* AppDelegate.swift */; };
 		A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A594891E54C007006CEFD5 /* BaseViewController.swift */; };
@@ -66,6 +67,7 @@
 		926A4FB03A1DA5BF92BBD515 /* Pods_RideShareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03166121E62CA2D00FC94FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RideShareApp.storyboard; sourceTree = "<group>"; };
 		A03166141E63461900FC94FB /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A036B6FA1E68660400C6A153 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0A5947E1E54BE04006CEFD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0A594871E54C007006CEFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0A594891E54C007006CEFD5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 			name = StoryBoards;
 			sourceTree = "<group>";
 		};
+		A036B6F91E6865FC00C6A153 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A036B6FA1E68660400C6A153 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A0A5947D1E54BE04006CEFD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 		A0A594861E54C007006CEFD5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A036B6F91E6865FC00C6A153 /* Utils */,
 				A0F5D4591E62A4350088CCB5 /* Models */,
 				1B81D0F21E5EEE3500083182 /* DataManager */,
 				A0A594881E54C007006CEFD5 /* ViewControllers */,
@@ -368,6 +379,7 @@
 				1B81D0ED1E5DA8CF00083182 /* AutocompleteBaseViewController.m in Sources */,
 				1B81D0EF1E5DA8CF00083182 /* BaseDemoViewController.m in Sources */,
 				1B81D0F81E5EF6BA00083182 /* HomeViewController.swift in Sources */,
+				A036B6FB1E68660400C6A153 /* Utils.swift in Sources */,
 				1B81D1041E60369E00083182 /* MyRidesViewController.swift in Sources */,
 				A0A5948A1E54C007006CEFD5 /* AppDelegate.swift in Sources */,
 				1B81D0F41E5EEE3500083182 /* MapDataManager.swift in Sources */,
