@@ -26,13 +26,13 @@ class UserProfileViewController: BaseViewController {
     @IBAction func btnSaveTapped(_ sender: Any) {
         user.userEmail  = txtEmail.text
         user.userName   = txtName.text
-        user.userGender = txtGender.text
+        user.userGender = txtGender.text!
         
         user.userVehicle.isVehicleOwner    = switchIsOwner.isOn
-        user.userVehicle.vehicleNumber     = txtVehicleNumber.text
-        user.userVehicle.vehicleModel      = txtVehicleModel.text
-        user.userVehicle.vehicleSource     = txtSource.text
-        user.userVehicle.vehicleDestination = txtDestination.text
+        user.userVehicle.vehicleNumber     = txtVehicleNumber.text!
+        user.userVehicle.vehicleModel      = txtVehicleModel.text!
+        user.userVehicle.vehicleSource     = txtSource.text!
+        user.userVehicle.vehicleDestination = txtDestination.text!
         
         saveToDB()
     }
