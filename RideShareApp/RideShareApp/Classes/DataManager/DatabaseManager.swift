@@ -12,7 +12,7 @@ import FirebaseDatabase
 class DatabaseManager: NSObject {
     var dbRef: FIRDatabaseReference!
     let rootNode: String = "RideShareAppData"
-    let userNode: String = "User"
+    let userNode: String = "UserData"
     
     override init() {
         super.init()

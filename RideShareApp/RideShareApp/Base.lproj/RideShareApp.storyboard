@@ -258,7 +258,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGI-Tw-kGC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQl-wr-II6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sQl-wr-II6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -323,6 +323,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnProceedTapped:" destination="wMg-rd-U4E" eventType="touchUpInside" id="jtG-UW-efJ"/>
                                     <segue destination="1Lr-XI-2Lj" kind="show" id="KDh-oX-bNW"/>
                                 </connections>
                             </button>
@@ -338,6 +339,12 @@ By having more people using one vehicle, carpooling reduces each person's travel
                             <constraint firstItem="hpf-va-3kq" firstAttribute="leading" secondItem="HCl-fE-Iie" secondAttribute="leading" constant="8" id="yob-QQ-uZ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtDateTime" destination="tFB-sf-E1t" id="anT-95-EOu"/>
+                        <outlet property="txtDestination" destination="TIW-bE-lVz" id="j0n-Ln-LyR"/>
+                        <outlet property="txtNumberofSeats" destination="GgB-ca-kQ3" id="mcx-xy-RqT"/>
+                        <outlet property="txtSource" destination="1AM-sk-wjZ" id="Gq2-Cj-mx3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ed-l3-r7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
