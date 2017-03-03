@@ -336,6 +336,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnProceedTapped:" destination="wMg-rd-U4E" eventType="touchUpInside" id="jtG-UW-efJ"/>
                                     <segue destination="1Lr-XI-2Lj" kind="show" id="KDh-oX-bNW"/>
                                 </connections>
                             </button>
