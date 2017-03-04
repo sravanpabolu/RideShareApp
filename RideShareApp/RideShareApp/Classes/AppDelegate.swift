@@ -59,9 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let user:User = User.sharedInstance
         user.userName = fullName
         user.userEmail = email
-        user.isUserSigninSuccess = true
-        
-        
     }
     
     

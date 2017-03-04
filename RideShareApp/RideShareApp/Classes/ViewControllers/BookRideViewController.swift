@@ -19,10 +19,10 @@ class BookRideViewController: BaseViewController {
         super.viewDidLoad()
         pickerBookingDate.setValue(UIColor.white, forKey: "textColor");
         pickerBookingDate.minimumDate = Date()
-        pickerBookingDate.addTarget(self, action: #selector(setBookingTime(pickerVal:)) , for: UIControlEvents.valueChanged)
-        
+        pickerBookingDate.addTarget(self, action: #selector(setBookingTime(pickerVal:)) , for: UIControlEvents.valueChanged)        
     }
     
+    //MARK: Memory
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

@@ -10,11 +10,11 @@ import Foundation
 
 class Rides: NSObject {
     
-    public var rideSource:String?
-    public var rideDestination:String?
+    public var rideSource:String = "NA"
+    public var rideDestination:String = "NA"
     public var rideStartTime:Date?
     public var rideEndTime:Date?
-    public var rideRouteName:String?
+    public var rideRouteName:String = "NA"
     
     override init() {
         super.init()
