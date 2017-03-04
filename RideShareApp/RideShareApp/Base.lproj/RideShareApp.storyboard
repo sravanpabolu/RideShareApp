@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BGI-Tw-kGC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BGI-Tw-kGC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lma-5W-eb4" id="DPb-bi-ssv">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -323,7 +323,6 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnProceedTapped:" destination="wMg-rd-U4E" eventType="touchUpInside" id="jtG-UW-efJ"/>
                                     <segue destination="1Lr-XI-2Lj" kind="show" id="KDh-oX-bNW"/>
                                 </connections>
                             </button>
@@ -340,9 +339,9 @@ By having more people using one vehicle, carpooling reduces each person's travel
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="txtDateTime" destination="tFB-sf-E1t" id="anT-95-EOu"/>
+                        <outlet property="pickerBookingDate" destination="tFB-sf-E1t" id="s7T-O4-7Hm"/>
                         <outlet property="txtDestination" destination="TIW-bE-lVz" id="j0n-Ln-LyR"/>
-                        <outlet property="txtNumberofSeats" destination="GgB-ca-kQ3" id="mcx-xy-RqT"/>
+                        <outlet property="txtNumberOfSeats" destination="GgB-ca-kQ3" id="V0P-hn-TjL"/>
                         <outlet property="txtSource" destination="1AM-sk-wjZ" id="Gq2-Cj-mx3"/>
                     </connections>
                 </viewController>
@@ -362,19 +361,61 @@ By having more people using one vehicle, carpooling reduces each person's travel
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-M4-iJw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-M4-iJw">
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uer-Vj-lKv">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="86" id="uer-Vj-lKv" customClass="RouteTableViewCell" customModule="RideShareApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uer-Vj-lKv" id="Iwj-9X-ijo">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxI-y9-Deh">
+                                                    <rect key="frame" x="10" y="10" width="271" height="66"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EM-d6-ZYm">
+                                                    <rect key="frame" x="291" y="55" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b08-iE-7zr">
+                                                    <rect key="frame" x="291" y="10" width="42" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="3EM-d6-ZYm" firstAttribute="leading" secondItem="b08-iE-7zr" secondAttribute="leading" id="1bS-E1-p9x"/>
+                                                <constraint firstItem="b08-iE-7zr" firstAttribute="top" secondItem="OxI-y9-Deh" secondAttribute="top" id="CHJ-W0-y2E"/>
+                                                <constraint firstAttribute="trailing" secondItem="3EM-d6-ZYm" secondAttribute="trailing" constant="10" id="K55-K4-xY7"/>
+                                                <constraint firstAttribute="bottom" secondItem="3EM-d6-ZYm" secondAttribute="bottom" constant="10" id="MW9-yG-J94"/>
+                                                <constraint firstItem="3EM-d6-ZYm" firstAttribute="top" secondItem="b08-iE-7zr" secondAttribute="bottom" constant="10" id="N8k-48-ahW"/>
+                                                <constraint firstAttribute="bottom" secondItem="OxI-y9-Deh" secondAttribute="bottom" constant="10" id="cf3-GW-r2q"/>
+                                                <constraint firstItem="b08-iE-7zr" firstAttribute="leading" secondItem="OxI-y9-Deh" secondAttribute="trailing" constant="10" id="jE8-aN-ftt"/>
+                                                <constraint firstItem="b08-iE-7zr" firstAttribute="trailing" secondItem="3EM-d6-ZYm" secondAttribute="trailing" id="tYl-mi-wA0"/>
+                                                <constraint firstItem="OxI-y9-Deh" firstAttribute="leading" secondItem="Iwj-9X-ijo" secondAttribute="leading" constant="10" id="uZZ-wE-Pfr"/>
+                                                <constraint firstItem="OxI-y9-Deh" firstAttribute="top" secondItem="Iwj-9X-ijo" secondAttribute="top" constant="10" id="usV-7x-arw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDistance" destination="b08-iE-7zr" id="Tpt-g0-J71"/>
+                                            <outlet property="lblDuration" destination="3EM-d6-ZYm" id="1ue-o1-tYi"/>
+                                            <outlet property="lblRouteName" destination="OxI-y9-Deh" id="ogI-6L-ZUK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Lr-XI-2Lj" id="fhy-OL-Uo8"/>
+                                    <outlet property="delegate" destination="1Lr-XI-2Lj" id="inH-Ap-z8f"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -385,10 +426,13 @@ By having more people using one vehicle, carpooling reduces each person's travel
                             <constraint firstItem="lf9-M4-iJw" firstAttribute="top" secondItem="51u-Xb-AJ5" secondAttribute="bottom" id="kKf-K5-5Vv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tblRoutes" destination="lf9-M4-iJw" id="SRJ-O1-ZNx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mR-nS-UsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="-22"/>
+            <point key="canvasLocation" x="2728.8000000000002" y="-22.03898050974513"/>
         </scene>
         <!--Go Ride-->
         <scene sceneID="2Wl-UE-kc0">
@@ -417,7 +461,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMP-hQ-OgL">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMP-hQ-OgL" customClass="GMSMapView">
                                         <rect key="frame" x="0.0" y="70" width="343" height="517"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -433,6 +477,9 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                 <state key="normal" title="Start Ride">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startRide:" destination="dpP-W9-a13" eventType="touchUpInside" id="YMe-jX-8qe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -445,6 +492,11 @@ By having more people using one vehicle, carpooling reduces each person's travel
                             <constraint firstItem="RtB-0O-yF5" firstAttribute="top" secondItem="Q8v-ik-51w" secondAttribute="bottom" id="ZZw-7z-otR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="iMP-hQ-OgL" id="h3i-3e-XfN"/>
+                        <outlet property="txtDestination" destination="lPU-cB-jmG" id="s45-6R-dd8"/>
+                        <outlet property="txtSource" destination="K2z-oz-0jc" id="lTE-iH-bdz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zte-iW-bUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -526,7 +578,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         <rect key="frame" x="0.0" y="28" width="343" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x63-Mc-rhr" id="lHq-S9-C6S">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="73.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="afr-O2-tOV">

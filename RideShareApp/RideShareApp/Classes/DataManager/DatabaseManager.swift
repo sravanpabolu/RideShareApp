@@ -13,7 +13,8 @@ class DatabaseManager: NSObject {
     var dbRef: FIRDatabaseReference!
     let rootNode: String = "RideShareAppData"
     let userNode: String = "UserData"
-    
+    let rideNode: String = "Ride"
+
     override init() {
         super.init()
         dbRef = FIRDatabase.database().reference()
@@ -187,4 +188,51 @@ class DatabaseManager: NSObject {
      }
      }
      */
+    
+    func saveRideData(ride: Rides) {
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy hh:mm a"
+        let dateFormatterId = DateFormatter()
+        dateFormatterId.dateFormat = "ddMMyyhhmma"
+
+        
+        let strStartTime = dateFormatter.string(from: ride.rideStartTime!)
+        let strId = dateFormatterId.string(from: ride.rideStartTime!)
+
+        let rideData = [
+            "RideStartingPoint" : ride.rideSource ,
+            "RideEndingPoint" : ride.rideDestination ,
+            "RideStartingTime" : strStartTime ,
+            "RideEndingTime" : ride.rideEndTime ?? "01-01-1990" ,
+            "RideRoute" : ride.rideRouteName,
+            "RideRouteLine" : ride.strRouteOverllPoints!,
+//            "RideLatLong" : ride.arrRouteLatLong!,
+            "RidePoints" : ride.arrRoutePoints!
+            ] as [String : Any]
+
+        
+        //MARK: To be changed
+        let formattedRideId = strId
+        
+        dbRef.child(rootNode)
+            .child(rideNode)
+            .child(formattedRideId)
+            .setValue(rideData, withCompletionBlock: {
+                (error: Error?, ref:FIRDatabaseReference!) in
+                    print("Ride data Created")
+                    if let error = error {
+                        print("Error: while creating data in DB : \(error.localizedDescription)")
+                    }
+            })
+
+    }
+    
+//    func getRideData(ride: Rides) {
+//        dbRef.child(rootNode)
+//            .child(rideNode).obser
+//
+//        
+//    }
 }

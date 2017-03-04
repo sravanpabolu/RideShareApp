@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 class GoRideViewController: BaseViewController {
+    
+    @IBOutlet weak var txtSource: UITextField!
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var txtDestination: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,4 +25,8 @@ class GoRideViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    @IBAction func startRide(_ sender: Any) {
+    }
+    
 }
