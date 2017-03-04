@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class MapDataManager: NSObject {
-
+    
     var dictCoordResults: Dictionary<String, AnyObject>!
     var strFormattedAddress: String!
     
@@ -19,7 +19,7 @@ class MapDataManager: NSObject {
     
     var arrSelectedRoute: Array<Dictionary<String, AnyObject>?>!
     var arrOverviewPolylines: Array<Dictionary<String, AnyObject>?> = []
-
+    
     var dictSelectedRoute: Dictionary<String, AnyObject>!
     var dictOverviewPolyline: Dictionary<String, AnyObject>!
     
@@ -67,11 +67,11 @@ class MapDataManager: NSObject {
                 strRequest = strRequest.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
                 let urlDirectionsRequest = URL(string: strRequest)
                 
-                DispatchQueue.main.async(execute: { 
+                DispatchQueue.main.async(execute: {
                     let dataDirectionsResult = NSData(contentsOf: urlDirectionsRequest!)
                     
                     do {
-
+                        
                         let dictDirectionResult: Dictionary<String,Any> = try JSONSerialization.jsonObject(with: dataDirectionsResult as! Data, options: .mutableContainers) as! Dictionary<String,Any>
                         let status = dictDirectionResult["status"] as! String
                         
@@ -85,7 +85,7 @@ class MapDataManager: NSObject {
                                 self.dictOverviewPolyline = dicTmp?["overview_polyline"] as! Dictionary<String, AnyObject>
                                 self.arrOverviewPolylines.append(self.dictOverviewPolyline)
                                 legs = dicTmp?["legs"] as! Array<Dictionary<String, AnyObject>>
-
+                                
                             }
                             
                             let startLocationDictionary = legs[0]["start_location"] as! Dictionary<String, AnyObject>
@@ -97,7 +97,7 @@ class MapDataManager: NSObject {
                             self.strOriginAddress = legs[0]["start_address"] as! String
                             self.strDestinationAddress = legs[legs.count - 1]["end_address"] as! String
                             
-//                            self.calculateTotalDistanceAndDuration()
+                            //                            self.calculateTotalDistanceAndDuration()
                             
                             completionHandler(status, true)
                         }
@@ -107,7 +107,7 @@ class MapDataManager: NSObject {
                     }catch{
                         
                     }
-
+                    
                 })
             }
             else {
@@ -139,6 +139,62 @@ class MapDataManager: NSObject {
         return arrCoordinates
         
     }
+    
+    func getRoutesBetween(source: String!, destination: String!, waypoints: Array<String>!, travelMode: AnyObject!, completionHandler: @escaping ((String, Bool, Array<Routes>?) -> Void)) {
+        
+        guard let strOrigin = source, let strDestination = destination else {
+            
+            completionHandler("Origin/Destination is nil.", false, nil)
+            return
+            
+        }
+        
+        var strRequest = "https://maps.googleapis.com/maps/api/directions/json?" + "origin=" + strOrigin + "&destination=" + strDestination + "&alternatives=true"
+        strRequest = strRequest.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let urlDirectionsRequest = URL(string: strRequest)
+        
+        DispatchQueue.main.async(execute: {
+            
+            let dataDirectionsResult = NSData(contentsOf: urlDirectionsRequest!)
+            
+            do {
+                
+                let dictDirectionResult: Dictionary<String,AnyObject> = try JSONSerialization.jsonObject(with: dataDirectionsResult as! Data, options: .mutableContainers) as! Dictionary<String,AnyObject>
+                let status = dictDirectionResult["status"] as! String
+                if status == "OK" {
+                    
+                    self.arrSelectedRoute = dictDirectionResult["routes"] as! Array<Dictionary<String, AnyObject>>
 
+                    var arrRoutes: [Routes] = []
+                    for dicTmp in self.arrSelectedRoute
+                    {
+                        let legs = dicTmp?["legs"] as! Array<Dictionary<String, AnyObject>>
+                        let dictLegTmp = legs[0] as [String:AnyObject]
+                        
+                        let strTmpRouteName = dicTmp?["summary"] as! String
+                        
+                        let dictTmpRouteDistance = dictLegTmp["distance"] as! Dictionary<String,Any>
+                        let strTmpRouteDistance = dictTmpRouteDistance["text"]! as! String
+                        
+                        let dictTmpRouteTime = dictLegTmp["duration"] as! Dictionary<String,Any>
+                        let strTmpRouteTime = dictTmpRouteTime["text"]! as! String
+
+                        let route = Routes(routeName: strTmpRouteName, routeDistance: strTmpRouteDistance, routeTime: strTmpRouteTime)
+                        arrRoutes.append(route)
+                        
+                    }
+                    
+                    completionHandler(status, true, arrRoutes)
+                }
+                else {
+                    completionHandler(status, false, nil)
+                }
+            }catch{
+                
+            }
+            
+        })
+ 
+    }
 }
 

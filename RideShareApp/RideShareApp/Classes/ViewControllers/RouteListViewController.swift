@@ -19,7 +19,10 @@ class RouteListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.mapDataManager.getRoutesBetween(source: "Siruseri, Tamil Nadu", destination: "Velachery, Chennai, Tamil Nadu", waypoints: nil, travelMode: nil) { (status, success, routes) in
+            print("test %d",routes?.count)
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
