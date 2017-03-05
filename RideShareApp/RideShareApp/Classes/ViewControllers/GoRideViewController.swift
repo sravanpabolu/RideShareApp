@@ -18,6 +18,7 @@ class GoRideViewController: BaseViewController {
     var selectedRide: Rides?
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = User.sharedInstance
         let dbManager = DatabaseManager()
         dbManager.getRideData(rideId: "") {(ride) in
             self.selectedRide = ride

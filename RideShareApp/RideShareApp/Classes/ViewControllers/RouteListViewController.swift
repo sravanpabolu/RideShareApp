@@ -16,7 +16,11 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
     var strDestination: String?
     var iNumberOfSeats: Int?
     var dtBookingDate: Date?
+    var isDriver: Bool?
+
     let mapDataManager = MapDataManager.sharedMapDataManager
+    let dbManager = DatabaseManager()
+
     var arrRoutes: [Routes] = []
     
     override func viewDidLoad() {
@@ -25,7 +29,8 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         tblRoutes.layer.masksToBounds = true
         tblRoutes.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).cgColor
         tblRoutes.layer.borderWidth = 2.0
-        getRoutes()
+        isDriver = false
+        getRoutes(isDriver: false)
 
     }
     
@@ -39,6 +44,7 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if(isDriver)! {
         let cellRoute = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteTableViewCell
         cellRoute.contentView.backgroundColor = UIColor.black
         
@@ -47,6 +53,20 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         cellRoute.lblDistance.text = routeObj.strRouteDistance
         cellRoute.lblDuration.text = routeObj.strRouteTime
         return cellRoute
+        }
+        else {
+            let cellRide = tableView.dequeueReusableCell(withIdentifier: "RideCell", for: indexPath) as! RideSelectionTableViewCell
+            cellRide.contentView.backgroundColor = UIColor.black
+            
+            let routeObj = self.arrRoutes[indexPath.row]
+            cellRide.lblRideDtl.text = routeObj.strRouteSource + "->" + routeObj.strRouteDestination
+
+            cellRide.lblRouteName.text = routeObj.strRouteName
+            cellRide.lblDriverName.text = routeObj.strUserName! + "-" + routeObj.strUserVehicle!
+            cellRide.lblTime.text = routeObj.strRouteTime
+            return cellRide
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,7 +85,6 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         ride.arrRouteLatLong = routeObj.arrRouteLatLong
         ride.arrRoutePoints = routeObj.arrRoutePoints
         ride.strRouteOverllPoints = routeObj.strRouteOverllPoints
-        let dbManager = DatabaseManager()
         dbManager.saveRideData(ride: ride)
         
         let alertController = UIAlertController(title: "Ride Booking", message: "Ride Booking initiated successfully", preferredStyle: .alert)
@@ -76,12 +95,27 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
 
     }
     
-    func getRoutes() {
+    func getRoutes(isDriver:Bool) {
         
-        self.mapDataManager.getRoutesBetween(source: strSource, destination: strDestination, waypoints: nil, travelMode: nil) { (status, success, routes) in
+        if(isDriver) {
+            self.mapDataManager.getRoutesBetween(source: strSource, destination: strDestination, waypoints: nil, travelMode: nil) { (status, success, routes) in
+                
+                self.arrRoutes = routes!
+                self.tblRoutes.reloadData()
+            }
+        }
+        else {
             
-            self.arrRoutes = routes!
-            self.tblRoutes.reloadData()
+            mapDataManager.geocodeAddress(address: "Sholinganallur, Chennai, Tamil Nadu", withCompletionHandler: { [unowned self](coord, success) in
+                if(success) {
+                    self.dbManager.getAllRidesWithSource(source: "Siruseri, Tamil Nadu",andTime: self.dtBookingDate!,andDestination: coord) { ride in
+                        self.arrRoutes = ride
+                        self.tblRoutes.reloadData()
+
+                    }
+                }
+            })
+
         }
         
     }

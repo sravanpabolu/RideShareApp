@@ -25,4 +25,20 @@ class Utils: NSObject {
         
         return returnString
     }
+    
+    func getFormattedStringFromDate(date: Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy hh:mm a"
+        let strDate = dateFormatter.string(from: date)
+        return strDate
+    }
+    
+    func getFormattedDateFromString(strDate: String) -> Date {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy hh:mm a"
+        let dt = dateFormatter.date(from: strDate)
+        return dt!
+    }
 }

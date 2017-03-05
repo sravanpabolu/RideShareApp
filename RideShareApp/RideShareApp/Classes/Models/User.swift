@@ -10,6 +10,7 @@ import Foundation
 
 class User: NSObject {
     
+    public var userId:String?
     public var userName:String?
     public var userEmail:String?
     public var userGender:String = "NA"

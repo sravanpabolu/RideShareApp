@@ -18,7 +18,7 @@ class BookRideViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerBookingDate.setValue(UIColor.white, forKey: "textColor");
-        pickerBookingDate.minimumDate = Date()
+//        pickerBookingDate.minimumDate = Date()
         pickerBookingDate.addTarget(self, action: #selector(setBookingTime(pickerVal:)) , for: UIControlEvents.valueChanged)
     }
     

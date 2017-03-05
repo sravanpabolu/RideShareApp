@@ -158,13 +158,13 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Male" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsK-vY-KHb">
-                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="79.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="999999999999" borderStyle="roundedRect" placeholder="Contact Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sxq-ib-fvu">
-                                        <rect key="frame" x="0.0" y="119" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -182,7 +182,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg0-0d-5Ha">
-                                        <rect key="frame" x="0.0" y="239" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="238.5" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awN-Mt-wDR">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
@@ -199,7 +199,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TN 11 Y 2728" borderStyle="roundedRect" placeholder="Vehicle Number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfX-dd-g80">
-                                        <rect key="frame" x="0.0" y="279" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="279.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -258,7 +258,7 @@ By having more people using one vehicle, carpooling reduces each person's travel
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGI-Tw-kGC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQl-wr-II6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sQl-wr-II6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -293,13 +293,13 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-bE-lVz">
-                                        <rect key="frame" x="0.0" y="53" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. of seats" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GgB-ca-kQ3">
-                                        <rect key="frame" x="0.0" y="107" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="106.5" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -409,6 +409,62 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                             <outlet property="lblDistance" destination="b08-iE-7zr" id="Tpt-g0-J71"/>
                                             <outlet property="lblDuration" destination="3EM-d6-ZYm" id="1ue-o1-tYi"/>
                                             <outlet property="lblRouteName" destination="OxI-y9-Deh" id="ogI-6L-ZUK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RideCell" id="4D7-j4-G5g" customClass="RideSelectionTableViewCell" customModule="RideShareApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4D7-j4-G5g" id="Zg2-4K-ZvP">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-6j-AMl">
+                                                    <rect key="frame" x="10" y="10" width="276" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpI-ke-npx">
+                                                    <rect key="frame" x="291" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEx-ul-4iY">
+                                                    <rect key="frame" x="291" y="41" width="42" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r6-BL-yRh">
+                                                    <rect key="frame" x="10" y="41" width="276" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3r6-BL-yRh" secondAttribute="bottom" constant="10" id="4Kz-OS-B1i"/>
+                                                <constraint firstItem="3r6-BL-yRh" firstAttribute="leading" secondItem="r5v-6j-AMl" secondAttribute="leading" id="5A4-ZL-Yfh"/>
+                                                <constraint firstItem="HpI-ke-npx" firstAttribute="bottom" secondItem="r5v-6j-AMl" secondAttribute="bottom" id="5g3-rz-dhX"/>
+                                                <constraint firstItem="HpI-ke-npx" firstAttribute="leading" secondItem="r5v-6j-AMl" secondAttribute="trailing" constant="5" id="B8k-eu-iQT"/>
+                                                <constraint firstItem="r5v-6j-AMl" firstAttribute="leading" secondItem="Zg2-4K-ZvP" secondAttribute="leading" constant="10" id="Fxj-Mi-Fua"/>
+                                                <constraint firstItem="iEx-ul-4iY" firstAttribute="top" secondItem="3r6-BL-yRh" secondAttribute="top" id="JzD-MA-xC4"/>
+                                                <constraint firstAttribute="trailing" secondItem="HpI-ke-npx" secondAttribute="trailing" constant="10" id="NTQ-uy-LAr"/>
+                                                <constraint firstItem="iEx-ul-4iY" firstAttribute="trailing" secondItem="HpI-ke-npx" secondAttribute="trailing" id="TdX-c6-qda"/>
+                                                <constraint firstItem="3r6-BL-yRh" firstAttribute="top" secondItem="r5v-6j-AMl" secondAttribute="bottom" constant="10" id="ZDM-F3-oL5"/>
+                                                <constraint firstItem="r5v-6j-AMl" firstAttribute="top" secondItem="Zg2-4K-ZvP" secondAttribute="top" constant="10" id="a4o-k7-ffx"/>
+                                                <constraint firstItem="HpI-ke-npx" firstAttribute="top" secondItem="r5v-6j-AMl" secondAttribute="top" id="k6F-F0-awy"/>
+                                                <constraint firstItem="3r6-BL-yRh" firstAttribute="trailing" secondItem="r5v-6j-AMl" secondAttribute="trailing" id="pxF-UT-NtZ"/>
+                                                <constraint firstItem="iEx-ul-4iY" firstAttribute="bottom" secondItem="3r6-BL-yRh" secondAttribute="bottom" id="s0i-xK-Z6C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDriverName" destination="HpI-ke-npx" id="cBx-vf-uba"/>
+                                            <outlet property="lblRideDtl" destination="r5v-6j-AMl" id="fNu-bi-xXZ"/>
+                                            <outlet property="lblRouteName" destination="3r6-BL-yRh" id="lh6-n9-8Ny"/>
+                                            <outlet property="lblTime" destination="iEx-ul-4iY" id="Xlk-Ut-gzn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -588,14 +644,14 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                                             <rect key="frame" x="0.0" y="0.0" width="75" height="63"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.45 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg5-P9-aHB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="31.5"/>
                                                                     <color key="backgroundColor" red="0.1495800776" green="0.53671147429999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce1-Oe-5yc">
-                                                                    <rect key="frame" x="0.0" y="32" width="75" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="31.5" width="75" height="31.5"/>
                                                                     <color key="backgroundColor" red="0.1495800776" green="0.53671147429999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -610,14 +666,14 @@ By having more people using one vehicle, carpooling reduces each person's travel
                                                             <rect key="frame" x="80" y="0.0" width="173" height="63"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW2-bR-9HE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="173" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="173" height="31.5"/>
                                                                     <color key="backgroundColor" red="0.1495800776" green="0.53671147429999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siruseri - Adyar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tL5-7T-tkJ">
-                                                                    <rect key="frame" x="0.0" y="32" width="173" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="31.5" width="173" height="31.5"/>
                                                                     <color key="backgroundColor" red="0.1495800776" green="0.53671147429999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

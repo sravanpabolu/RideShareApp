@@ -32,7 +32,7 @@ class MapDataManager: NSObject {
     static let sharedMapDataManager = MapDataManager()
     var selectedRoute: Routes?
     
-    func geocodeAddress(address: String!, withCompletionHandler completionHandler:@escaping ((_ status:String,_ success: Bool) -> Void)){
+    func geocodeAddress(address: String!, withCompletionHandler completionHandler:@escaping ((_ coord:CLLocationCoordinate2D?,_ success: Bool) -> Void)){
         if let strAddress = address {
             var strRequest = "https://maps.googleapis.com/maps/api/geocode/json?address=" + strAddress
             strRequest = strRequest.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -44,15 +44,15 @@ class MapDataManager: NSObject {
                     let status = dictGeoCodingResult["status"] as! String
                     if status == "OK" {
                         let dictAllResults = dictGeoCodingResult["results"] as! Array<Dictionary<String, AnyObject>>
-                        self.dictCoordResults = dictAllResults[0]
-                        self.strFormattedAddress = self.dictCoordResults["formatted_address"] as! String
-                        let geometry = self.dictCoordResults["geometry"] as! Dictionary<String, AnyObject>
-                        self.fAddressLongitude = ((geometry["location"] as! Dictionary<String, AnyObject>)["lng"] as! NSNumber).doubleValue
-                        self.fAddressLatitude = ((geometry["location"] as! Dictionary<String, AnyObject>)["lat"] as! NSNumber).doubleValue
-                        completionHandler(status, true)
+                        let dictCoordResults = dictAllResults[0]
+                        let geometry = dictCoordResults["geometry"] as! Dictionary<String, AnyObject>
+                        let fAddressLongitude = ((geometry["location"] as! Dictionary<String, AnyObject>)["lng"] as! NSNumber).doubleValue
+                        let fAddressLatitude = ((geometry["location"] as! Dictionary<String, AnyObject>)["lat"] as! NSNumber).doubleValue
+                        let coord = CLLocationCoordinate2DMake(fAddressLatitude, fAddressLongitude)
+                        completionHandler(coord, true)
                     }
                     else {
-                        completionHandler(status, false)
+                        completionHandler(nil, false)
                     }
                 }catch {
                     
