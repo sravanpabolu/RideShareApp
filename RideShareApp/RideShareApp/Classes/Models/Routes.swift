@@ -18,7 +18,7 @@ class Routes: NSObject {
     public var strRouteDestination: String
     public var strRouteOverllPoints: String?
     public var arrRoutePoints: [String]?
-    public var arrRouteLatLong: [CLLocationCoordinate2D]?
+    public var arrRouteLatLong: [String]?
     public var arrRouteL: [CLLocationCoordinate2D]?
 
 

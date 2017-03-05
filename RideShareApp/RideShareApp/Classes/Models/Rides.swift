@@ -17,9 +17,34 @@ class Rides: NSObject {
     public var rideRouteName:String = "NA"
     public var strRouteOverllPoints: String?
     public var arrRoutePoints: [String]?
-    public var arrRouteLatLong: [CLLocationCoordinate2D]?
+    public var arrRouteLatLong: [String]?
+    public var strSrcCoord: CLLocationCoordinate2D? {
+        
+        guard let strSrc = arrRouteLatLong?[0] else {
+            return nil
+        }
+        let arrTmp = strSrc.characters.split{$0 == ","}.map(String.init)
+        let coord = CLLocationCoordinate2DMake(Double(arrTmp[0])! ,
+                                               Double(arrTmp[1])!)
+        return coord
+
+    }
     
+    public var strDesCoord: CLLocationCoordinate2D? {
+        
+        guard let strDes = arrRouteLatLong?[(arrRouteLatLong?.count)!-1] else {
+            return nil
+        }
+        let arrTmp = strDes.characters.split{$0 == ","}.map(String.init)
+        let coord = CLLocationCoordinate2DMake(Double(arrTmp[0])! ,
+                                               Double(arrTmp[1])!)
+        return coord
+        
+    }
+
     override init() {
         super.init()
     }
+    
+    
 }

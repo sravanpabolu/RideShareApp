@@ -121,10 +121,10 @@ class MapDataManager: NSObject {
             completionHandler("Origin is nil", false)
         }
     }
-    func getAllCoordinatesAndPointsAlongRoute(route: [String : AnyObject]) -> ([CLLocationCoordinate2D], [String])
+    func getAllCoordinatesAndPointsAlongRoute(route: [String : AnyObject]) -> ([String], [String])
     {
         let arrLegs = route["legs"] as! Array<Dictionary<String, AnyObject>>
-        var arrCoordinates:[CLLocationCoordinate2D] = []
+        var arrCoordinates:[String] = []
         var arrPoints:[String] = []
 
         for dictLegTmp in arrLegs {
@@ -132,8 +132,9 @@ class MapDataManager: NSObject {
             for dictStepTmp in arrSteps {
                 let startLocationDictionary = dictStepTmp["start_location"] as! Dictionary<String, AnyObject>
                 let endLocationDictionary = dictStepTmp["end_location"] as! Dictionary<String, AnyObject>
-                let originCoordinate = CLLocationCoordinate2DMake(startLocationDictionary["lat"] as! Double, startLocationDictionary["lng"] as! Double)
-                let destinationCoordinate = CLLocationCoordinate2DMake(endLocationDictionary["lat"] as! Double, endLocationDictionary["lng"] as! Double)
+                
+                let originCoordinate = String(format:"%f,%f", startLocationDictionary["lat"] as! Double, startLocationDictionary["lng"] as! Double)
+                let destinationCoordinate = String(format:"%f,%f", endLocationDictionary["lat"] as! Double, endLocationDictionary["lng"] as! Double)
                 
                 let dictTmpStepPolyline = dictStepTmp["polyline"] as! [String:String]
                 let strRoutePoint = dictTmpStepPolyline["points"]

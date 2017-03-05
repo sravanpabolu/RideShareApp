@@ -78,6 +78,7 @@ class DatabaseManager: NSObject {
          */
         
         let formattedEmail = Utils.sharedInstance.trimCharacters(sourceString: user.userEmail!)
+        
         dbRef.child(rootNode)
             .child(userNode)
             .child(formattedEmail)
@@ -208,7 +209,7 @@ class DatabaseManager: NSObject {
             "RideEndingTime" : ride.rideEndTime ?? "01-01-1990" ,
             "RideRoute" : ride.rideRouteName,
             "RideRouteLine" : ride.strRouteOverllPoints!,
-//            "RideLatLong" : ride.arrRouteLatLong!,
+            "RideLatLong" : ride.arrRouteLatLong!,
             "RidePoints" : ride.arrRoutePoints!
             ] as [String : Any]
 
@@ -229,10 +230,34 @@ class DatabaseManager: NSObject {
 
     }
     
-//    func getRideData(ride: Rides) {
-//        dbRef.child(rootNode)
-//            .child(rideNode).obser
-//
-//        
-//    }
+    func getRideData(rideId: String?,completionHandler: @escaping (Rides) -> ()) -> () {
+        
+
+        dbRef.child(rootNode)
+            .child(rideNode)
+            .child("0503171100AM").observeSingleEvent(of: .value, with: { (snapshot) in
+                print("Exists: %@",snapshot.value)
+                let dictTmp = snapshot.value as! [String:Any]
+                let strSource = dictTmp["RideStartingPoint"] as! String
+                let strDestination = dictTmp["RideEndingPoint"] as! String
+                let strRoute = dictTmp["RideRoute"] as! String
+                let strRouteLine = dictTmp["RideRouteLine"] as! String
+                let arrRouteLatLong = dictTmp["RideLatLong"] as! [String]
+                let arrRoutePonts = dictTmp["RidePoints"] as! [String]
+
+                let ride = Rides()
+
+                ride.rideSource = strSource
+                ride.rideDestination = strDestination
+                ride.rideRouteName = strRoute
+                ride.strRouteOverllPoints = strRouteLine
+                ride.arrRouteLatLong = arrRouteLatLong
+                ride.arrRoutePoints = arrRoutePonts
+
+                completionHandler(ride)
+
+            })
+        
+
+    }
 }
