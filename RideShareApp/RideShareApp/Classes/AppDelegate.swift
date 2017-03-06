@@ -12,7 +12,7 @@ import Firebase
 import GooglePlaces
 import GoogleMaps
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         //For Signin
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         
         //For Google Places
         GMSPlacesClient.provideAPIKey("AIzaSyCR6zbxYZLAstY5NSwUJiQ--kE9Rv8G9FI")
@@ -34,41 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return true
     }
 
-    
-    // The sign-in flow has finished and was successful if |error| is |nil|.
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // ...
-        if let error = error {
-            print("Google Signin Error: \(error.localizedDescription)")
-            return
-        }
-        
-//        guard let authentication = user.authentication else { return }
-//        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
-//                                                          accessToken: authentication.accessToken)
-//        
-//        let userId = user.userID                  // For client-side use only!
-//        let idToken = user.authentication.idToken // Safe to send to the server
-        let fullName = user.profile.name
-//        let givenName = user.profile.givenName
-//        let familyName = user.profile.familyName
-        let email = user.profile.email
-        
-        print("User : \(fullName) signed in successfully")
-        
-        let user:User = User.sharedInstance
-        user.userName = fullName
-        user.userEmail = email
-    }
-    
-    
-    // Finished disconnecting |user| from the app successfully if |error| is |nil|.
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-        print("User : \(user.profile.name) signed out successfully")
-    }
-    
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
