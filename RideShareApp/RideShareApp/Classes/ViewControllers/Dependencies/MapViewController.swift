@@ -69,12 +69,12 @@ class MapViewController: UIViewController {
 //                    NSLog("%i", bIsAvailable)
                 }
             }
-            self.arrAllCoord = self.mapDataManager.getAllCoordinatesAlongRoute(route: self.mapDataManager.arrSelectedRoute.first!!)
-            
-            self.locationMarker = GMSMarker(position: self.arrAllCoord[MapViewController.iTmp] )
-            self.locationMarker.map = self.mapView
-            self.locationMarker.icon = GMSMarker.markerImage(with: UIColor.black)
-            self.locationMarker.opacity = 0.75
+//            self.arrAllCoord = self.mapDataManager.getAllCoordinatesAlongRoute(route: self.mapDataManager.arrSelectedRoute.first!!)
+//            
+//            self.locationMarker = GMSMarker(position: self.arrAllCoord[MapViewController.iTmp] )
+//            self.locationMarker.map = self.mapView
+//            self.locationMarker.icon = GMSMarker.markerImage(with: UIColor.black)
+//            self.locationMarker.opacity = 0.75
             if(MapViewController.iTmp == (self.arrAllCoord.count - 1)) {
                 self.helloWorldTimer.invalidate()
             }

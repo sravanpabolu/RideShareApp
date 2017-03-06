@@ -24,15 +24,24 @@
     },
     "User": {
       "user_id_is_the_email": {
-        "Given_Name": "John Smith",
-        "Contact_number": 9988998898,
-        "Gender": "Male",
-        "Ride_History": {
+        "UserData": {
+          "Given_Name": "John Smith",
+          "Contact_number": 9988998898,
+          "Gender": "Male",
+          "isVehicleOwner": true
+        },
+        "RideData": {
           "Open_Ride": "Ride_id_is_DateTime_VehicleNumber",
           "Completed_rides": [
             "Ride_id_is_DateTime_VehicleNumber",
             "Ride_id_is_DateTime_VehicleNumber"
           ]
+        },
+        "VehicleData": {
+          "VehicleDestination": "Mettukuppam",
+          "VehicleModel": "Hero Glamour",
+          "VehicleNumber": "TN 69 CU 0045",
+          "VehicleSource": "Siruseri"
         }
       }
     }

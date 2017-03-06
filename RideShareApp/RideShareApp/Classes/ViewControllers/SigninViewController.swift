@@ -10,7 +10,7 @@ import Foundation
 import GoogleSignIn
 import Firebase
 
-class SigninViewController: BaseViewController, GIDSignInUIDelegate {
+class SigninViewController: BaseViewController, GIDSignInUIDelegate,GIDSignInDelegate {
     
 //    @IBOutlet weak var btnSignout: GIDSignInButton!
 //    @IBOutlet weak var btnSignin: GIDSignInButton!
@@ -21,7 +21,9 @@ class SigninViewController: BaseViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         
         //Google Signin
-        GIDSignIn.sharedInstance().uiDelegate = self 
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,10 +36,19 @@ class SigninViewController: BaseViewController, GIDSignInUIDelegate {
 //        //TODO: Should remove the following statement and modify the text in the text view accordingly.
 //            txtFieldIntroduction.text = "Hello \(name)"
 //        }
-        
 //        _ = navigationController?.popToRootViewController(animated: true)
         navigationController?.dismiss(animated: true, completion: nil)
     }
+    
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        let userDefaults = UserDefaults.standard
+        let formattedEmail = Utils.sharedInstance.trimCharacters(sourceString: user.profile.email!)
+        userDefaults.set(formattedEmail, forKey: "User")
+        userDefaults.synchronize()
+
+    }
+
     
 //    @IBAction func btnSignoutTapped(_ sender: Any) {
 //        GIDSignIn.sharedInstance().disconnect()
