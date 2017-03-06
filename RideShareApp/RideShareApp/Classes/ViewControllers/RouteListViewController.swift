@@ -18,9 +18,12 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
     var dtBookingDate: Date?
     var isDriver: Bool?
 
+    let user = User()
+    
+    
     let mapDataManager = MapDataManager.sharedMapDataManager
     let dbManager = DatabaseManager()
-
+    
     var arrRoutes: [Routes] = []
     
     override func viewDidLoad() {
@@ -29,9 +32,10 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         tblRoutes.layer.masksToBounds = true
         tblRoutes.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).cgColor
         tblRoutes.layer.borderWidth = 2.0
-        isDriver = false
-        getRoutes(isDriver: false)
+        isDriver = user.userVehicle.isVehicleOwner
+        getRoutes(isDriver: isDriver!)
 
+//        isDriver = user.userVehicle.isVehicleOwner
     }
     
     override func didReceiveMemoryWarning() {

@@ -323,6 +323,8 @@ class DatabaseManager: NSObject {
                     let routePolyline = GMSPolyline(path: path)
                     routePolyline.map = rideMap
                     let bIsAvailable:Bool = GMSGeometryIsLocationOnPathTolerance(destination!, path, true,1000)
+                    
+                    //TODO: Change the condition value
                     if(true) {
                         var arrRides:[Routes] = []
                         let strSource = dictTmp["RideStartingPoint"] as! String
