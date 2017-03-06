@@ -319,6 +319,9 @@ class DatabaseManager: NSObject {
                 if (strTmp == strStartTime) {
                     let route = dictTmp["RideRouteLine"] as! String
                     let path: GMSPath = GMSPath(fromEncodedPath: route)!
+                    var rideMap: GMSMapView = GMSMapView()
+                    let routePolyline = GMSPolyline(path: path)
+                    routePolyline.map = rideMap
                     let bIsAvailable:Bool = GMSGeometryIsLocationOnPathTolerance(destination!, path, true,1000)
                     if(true) {
                         var arrRides:[Routes] = []
