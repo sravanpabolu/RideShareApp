@@ -10,7 +10,7 @@ import Foundation
 import GoogleSignIn
 import Firebase
 
-class SigninViewController: BaseViewController, GIDSignInUIDelegate,GIDSignInDelegate {
+class SigninViewController: BaseViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
 //    @IBOutlet weak var btnSignout: GIDSignInButton!
 //    @IBOutlet weak var btnSignin: GIDSignInButton!
@@ -30,23 +30,40 @@ class SigninViewController: BaseViewController, GIDSignInUIDelegate,GIDSignInDel
         super.viewDidAppear(animated)
     }
     
-    //this method is called, after user sign in completes.
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-//        if let name = User.sharedInstance.userName {
-//        //TODO: Should remove the following statement and modify the text in the text view accordingly.
-//            txtFieldIntroduction.text = "Hello \(name)"
-//        }
-//        _ = navigationController?.popToRootViewController(animated: true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    // The sign-in flow has finished and was successful if |error| is |nil|.
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // ...
+        if let error = error {
+            print("Google Signin Error: \(error.localizedDescription)")
+            showAlert(title: "Sign In", message: "Sign-in Error: \(error.localizedDescription)")
+            return
+        }
         
         let userDefaults = UserDefaults.standard
         let formattedEmail = Utils.sharedInstance.trimCharacters(sourceString: user.profile.email!)
         userDefaults.set(formattedEmail, forKey: "User")
         userDefaults.synchronize()
-
+        
+        let fullName = user.profile.name
+        let email = user.profile.email
+        
+        print("User : \(fullName) signed in successfully")
+        
+        let user:User = User.sharedInstance
+        user.userName = fullName
+        user.userEmail = email
+        
+        showAlert(title: "Sign In", message: "Sign in Success")
+        
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    //TODO: Logout
+    // Finished disconnecting |user| from the app successfully if |error| is |nil|.
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+        print("User : \(user.profile.name) signed out successfully")
     }
 
     
