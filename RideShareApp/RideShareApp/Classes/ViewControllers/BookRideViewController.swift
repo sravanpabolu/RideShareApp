@@ -48,7 +48,5 @@ class BookRideViewController: BaseViewController {
         vc.iNumberOfSeats = Int(txtNumberOfSeats.text!)
         vc.dtBookingDate = self.bookedDate
     }
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
-    }
+
 }

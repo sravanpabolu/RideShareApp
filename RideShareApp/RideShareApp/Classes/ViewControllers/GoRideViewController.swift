@@ -3,7 +3,7 @@
 //  RideShareApp
 //
 //  Created by Sravan on 23/02/17.
-//  
+//
 //
 
 import Foundation
@@ -16,19 +16,27 @@ class GoRideViewController: BaseViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var txtDestination: UITextField!
     var locationMarker:GMSMarker = GMSMarker()
-
+    
     static var iTmp = 0
-
+    
     var selectedRide: Rides?
     var locChangeTimer = Timer()
     var arrAllCoord: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
         let dbManager = DatabaseManager()
-        dbManager.getRideData(rideId: "") {(ride) in
-            self.selectedRide = ride
-            self.updateUI()
-            
+        dbManager.getRideData{(ride,success) in
+            if(success) {
+                self.selectedRide = ride
+                self.updateUI()
+            } else {
+                let alertController = UIAlertController(title: "Ride not available", message: "There are no open rides", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
+                    self.navigationController?.popToRootViewController(animated: true)
+                }))
+                self.present(alertController, animated: true, completion: nil)
+                
+            }
         }
         
     }
@@ -50,7 +58,7 @@ class GoRideViewController: BaseViewController {
         self.locationMarker.map = self.mapView
         self.locationMarker.icon = UIImage(named: "car.png")
         self.locationMarker.opacity = 0.75
-
+        
         if(GoRideViewController.iTmp == ((self.arrAllCoord?.count)! - 1)) {
             self.locChangeTimer.invalidate()
         }
@@ -89,11 +97,11 @@ class GoRideViewController: BaseViewController {
         }
         routePolyline.path = mutablePath
         routePolyline.strokeWidth = 4
-
+        
         //MARK: Polyline to be checked
-//        let path: GMSPath = GMSPath(fromEncodedPath: (self.selectedRide?.strRouteOverllPoints)!)!
-//        let routePolyline = GMSPolyline(path: path)
-//        routePolyline.map = self.mapView
+        //        let path: GMSPath = GMSPath(fromEncodedPath: (self.selectedRide?.strRouteOverllPoints)!)!
+        //        let routePolyline = GMSPolyline(path: path)
+        //        routePolyline.map = self.mapView
         
     }
     
@@ -109,7 +117,7 @@ class GoRideViewController: BaseViewController {
         CATransaction.setAnimationDuration(2.0)
         self.locationMarker.position = coord ;
         self.mapView.camera = GMSCameraPosition.camera(withTarget: coord, zoom: 13.0)
-
+        
         CATransaction.commit()
         if(MapViewController.iTmp == ((self.arrAllCoord?.count)! - 1)) {
             self.locChangeTimer.invalidate()

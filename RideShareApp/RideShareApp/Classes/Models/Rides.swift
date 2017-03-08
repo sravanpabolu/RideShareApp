@@ -18,6 +18,8 @@ class Rides: NSObject {
     public var strRouteOverllPoints: String?
     public var arrRoutePoints: [String]?
     public var arrRouteLatLong: [String]?
+    public var iSeatAvailable: Int?
+
     public var strSrcCoord: CLLocationCoordinate2D? {
         
         guard let strSrc = arrRouteLatLong?[0] else {

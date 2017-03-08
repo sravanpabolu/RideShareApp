@@ -32,7 +32,8 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         tblRoutes.layer.masksToBounds = true
         tblRoutes.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).cgColor
         tblRoutes.layer.borderWidth = 2.0
-        isDriver = user.userVehicle.isVehicleOwner
+//        isDriver = user.userVehicle.isVehicleOwner
+        isDriver = true
         getRoutes(isDriver: isDriver!)
 
 //        isDriver = user.userVehicle.isVehicleOwner
@@ -48,6 +49,7 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if(isDriver)! {
         let cellRoute = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteTableViewCell
         cellRoute.contentView.backgroundColor = UIColor.black
@@ -76,6 +78,8 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let routeObj = self.arrRoutes[indexPath.row]
+        
+        if(isDriver)! {
         mapDataManager.selectedRoute = routeObj
         
         let ride = Rides()
@@ -89,13 +93,39 @@ class RouteListViewController: BaseViewController,UITableViewDataSource,UITableV
         ride.arrRouteLatLong = routeObj.arrRouteLatLong
         ride.arrRoutePoints = routeObj.arrRoutePoints
         ride.strRouteOverllPoints = routeObj.strRouteOverllPoints
-        dbManager.saveRideData(ride: ride)
-        
-        let alertController = UIAlertController(title: "Ride Booking", message: "Ride Booking initiated successfully", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
-            self.navigationController?.popToRootViewController(animated: true)
-        }))
-        self.present(alertController, animated: true, completion: nil)
+        ride.iSeatAvailable = self.iNumberOfSeats!
+        dbManager.saveRideData(ride: ride){[unowned self](rideId) in
+            self.dbManager.observeForAvailableSeats(rideId: rideId){(passengerDetail,seatCount,success) in
+                if(success) {
+                    
+                }
+                
+            }
+            
+                let alertController = UIAlertController(title: "Ride Booking", message: "Ride Booking initiated successfully", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
+                    self.navigationController?.popToRootViewController(animated: true)
+                }))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        } else {
+            dbManager.savePassengerRideData(strRideId: routeObj.strRideId!, seatRequired: self.iNumberOfSeats!, destination: "Sholinganallur, Chennai, Tamil Nadu"){(success) in
+                if(success) {
+                    let alertController = UIAlertController(title: "Ride Booking", message: "Ride Booking initiated successfully", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }))
+                    self.present(alertController, animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Ride Booking", message: "Booking over", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+
 
     }
     
