@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import GooglePlaces
 
-class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerDelegate {
+class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var btnSource: UIButton!
-    @IBOutlet weak var btnDestination: UIButton!
+    @IBOutlet weak var txtSource: UITextField!
+    @IBOutlet weak var txtDestination: UITextField!
     @IBOutlet weak var txtNumberOfSeats: UITextField!
     @IBOutlet weak var pickerBookingDate: UIDatePicker!
     
-    var currentButton:UIButton?
+    var currentTag : Int = 10
     var bookedDate:Date = Date()
     
     override func viewDidLoad() {
@@ -26,6 +26,9 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
         pickerBookingDate.setValue(UIColor.white, forKey: "textColor");
 //        pickerBookingDate.minimumDate = Date()
         pickerBookingDate.addTarget(self, action: #selector(setBookingTime(pickerVal:)) , for: UIControlEvents.valueChanged)
+        
+        self.txtSource.delegate = self
+        self.txtDestination.delegate = self
     }
     
     //MARK: Memory
@@ -34,8 +37,25 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
         
     }
     
-    func setBookingTime(pickerVal:UIDatePicker) {
+    //MARK: UITextFieldDelegate methods
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
+        //Do not show autocomplete controller for number of seats text field
+        if textField == txtNumberOfSeats {
+            return true
+        }
+        
+        currentTag = textField.tag
+        
+        //Show autocomplete controller
+        let autoCompleteController = GMSAutocompleteViewController()
+        autoCompleteController.delegate = self;
+        _ = navigationController?.pushViewController(autoCompleteController, animated: true)
+        
+        return false
+    }
+    
+    func setBookingTime(pickerVal:UIDatePicker) {
         self.bookedDate = pickerVal.date
     }
     
@@ -59,31 +79,28 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
         
     }
     
-    @IBAction func btnSourceTapped(sender: UIButton) {
-        currentButton = sender
-        
-        let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self;
-        
-        _ = navigationController?.pushViewController(autoCompleteController, animated: false)
-    }
-    
     //MARK: Autocomplete place delegate methods
     public func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("Selected Place: \(place.name)")
         
-        currentButton?.titleLabel?.text = place.name
+        if currentTag == 10 {
+            txtSource.text = place.name
+        }
+        else if currentTag == 20 {
+            txtDestination.text = place.name
+        }
         _ = navigationController?.popViewController(animated: true)
     }
     
     public func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         print("Error while searching place : \(error.localizedDescription)")
-        _ = navigationController?.popViewController(animated: true)
         showAlert(title: "Error", message: error.localizedDescription)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     public func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         print("Place Selection Cancelled")
+        showAlert(title: "Error", message:"Place selection cancelled")
         _ = navigationController?.popViewController(animated: true)
     }
 }
