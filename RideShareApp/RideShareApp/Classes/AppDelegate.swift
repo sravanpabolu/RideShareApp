@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         
         //For Google Places
-        GMSPlacesClient.provideAPIKey("AIzaSyCR6zbxYZLAstY5NSwUJiQ--kE9Rv8G9FI")
+        GMSPlacesClient.provideAPIKey("AIzaSyCcMsz1AHokZ5Bk-__zxymNwkOyM_igyK4")
         GMSServices.provideAPIKey("AIzaSyBVcEaLlxvKT_w87TYJ6gmrx2QO-gxrgtM")
 
         return true
