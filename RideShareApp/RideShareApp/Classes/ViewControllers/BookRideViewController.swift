@@ -22,9 +22,10 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleSeatChangeNotification), name: NSNotification.Name(rawValue: "SeatChangeNotification"), object: nil)
         
         pickerBookingDate.setValue(UIColor.white, forKey: "textColor");
-//        pickerBookingDate.minimumDate = Date()
+        //        pickerBookingDate.minimumDate = Date()
         pickerBookingDate.addTarget(self, action: #selector(setBookingTime(pickerVal:)) , for: UIControlEvents.valueChanged)
         
         self.txtSource.delegate = self
@@ -61,16 +62,16 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //        guard ((txtSource.text?.characters.count)! > 0) && ((txtDestination.text?.characters.count)! > 0) && ((txtNumberOfSeats.text?.characters.count)! > 0) else {
-        //            let alertUser = UIAlertController(title: "Missing Values", message: "Please enter Source, Destination and Number of Seats", preferredStyle: .alert)
-        //            alertUser.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        //            self.present(alertUser, animated: true, completion: nil)
-        //            return
-        //        }
+        guard ((txtSource.text?.characters.count)! > 0) && ((txtDestination.text?.characters.count)! > 0) && ((txtNumberOfSeats.text?.characters.count)! > 0) else {
+            let alertUser = UIAlertController(title: "Missing Values", message: "Please enter Source, Destination and Number of Seats", preferredStyle: .alert)
+            alertUser.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertUser, animated: true, completion: nil)
+            return
+        }
         
         let vc = segue.destination as! RouteListViewController
-        vc.strSource = "Siruseri, Tamil Nadu"
-        vc.strDestination = "Velachery, Chennai, Tamil Nadu"
+        vc.strSource = txtSource.text
+        vc.strDestination = txtDestination.text
         vc.iNumberOfSeats = Int(txtNumberOfSeats.text!)
         vc.dtBookingDate = self.bookedDate
     }
@@ -102,5 +103,16 @@ class BookRideViewController: BaseViewController, GMSAutocompleteViewControllerD
         print("Place Selection Cancelled")
         showAlert(title: "Error", message:"Place selection cancelled")
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    func handleSeatChangeNotification() {
+        let alertController = UIAlertController(title: "Ride Booking", message: "Your seats are booked", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
     }
 }

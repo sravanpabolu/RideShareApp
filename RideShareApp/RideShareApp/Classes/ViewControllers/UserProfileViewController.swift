@@ -3,7 +3,7 @@
 //  RideShareApp
 //
 //  Created by Sravan on 23/02/17.
-//  
+//
 //
 
 import Foundation
@@ -44,7 +44,7 @@ class UserProfileViewController: BaseViewController {
         //TODO: Add closure to determine success or failure
         //if success, goto homeviewcontroller
         //if failure, show error
-//        _ = navigationController?.popToRootViewController(animated: true)
+        //        _ = navigationController?.popToRootViewController(animated: true)
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
@@ -63,9 +63,9 @@ class UserProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleSeatChangeNotification), name: NSNotification.Name(rawValue: "SeatChangeNotification"), object: nil)
         //Switch functionality
-//        switchIsOwner.addTarget(self, action: Selector("switchValueChanged:"), for: UIControlEvents.valueChanged)
+        //        switchIsOwner.addTarget(self, action: Selector("switchValueChanged:"), for: UIControlEvents.valueChanged)
         
         //auto generate, if user already signed in.
         if let email = user.userEmail {
@@ -81,5 +81,18 @@ class UserProfileViewController: BaseViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func handleSeatChangeNotification() {
+        let alertController = UIAlertController(title: "Ride Booking", message: "Your seats are booked", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
     }
 }

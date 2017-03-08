@@ -11,6 +11,7 @@ import CoreLocation
 
 class Routes: NSObject {
     
+    public var strRideId: String?
     public var strRouteName: String
     public var strRouteDistance: String?
     public var strRouteTime: String
@@ -23,6 +24,7 @@ class Routes: NSObject {
     public var strUserName: String?
     public var strUserEmail: String?
     public var strUserVehicle: String?
+    public var iNumberOfSeats: Int?
 
     init(routeName: String, routeDistance: String?, routeTime: String, routeSource: String, routeDestination: String) {
         
