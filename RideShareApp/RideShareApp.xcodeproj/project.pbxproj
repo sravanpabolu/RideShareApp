@@ -38,6 +38,7 @@
 		A0F5D45D1E62A5E80088CCB5 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5D45C1E62A5E80088CCB5 /* Vehicle.swift */; };
 		A0F5D45F1E62A6D60088CCB5 /* Rides.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5D45E1E62A6D60088CCB5 /* Rides.swift */; };
 		A7CB17C23F0196D8FE721B3B /* Pods_RideShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3A9BF81FD2B7AE39E9BF81 /* Pods_RideShareApp.framework */; };
+		F061DDFF1E701A7B001285C8 /* AutocompletePushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F061DDFE1E701A7B001285C8 /* AutocompletePushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		C7B092A87EDF4391F17DCA33 /* Pods-RideShareAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareAppTests/Pods-RideShareAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3A9BF81FD2B7AE39E9BF81 /* Pods_RideShareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4709A084CF75E880BB5F9CB /* Pods-RideShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideShareApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideShareApp/Pods-RideShareApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F061DDFD1E701A7B001285C8 /* AutocompletePushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompletePushViewController.h; sourceTree = "<group>"; };
+		F061DDFE1E701A7B001285C8 /* AutocompletePushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutocompletePushViewController.m; sourceTree = "<group>"; };
 		F31B21696EA5375835593AF3 /* Pods_RideShareAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideShareAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +107,8 @@
 		1B81D0E61E5DA8CF00083182 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				F061DDFD1E701A7B001285C8 /* AutocompletePushViewController.h */,
+				F061DDFE1E701A7B001285C8 /* AutocompletePushViewController.m */,
 				1B81D0E71E5DA8CF00083182 /* AutocompleteBaseViewController.h */,
 				1B81D0E81E5DA8CF00083182 /* AutocompleteBaseViewController.m */,
 				1B81D0E91E5DA8CF00083182 /* AutocompleteWithTextFieldController.h */,
@@ -405,6 +410,7 @@
 				A0A594961E55EE53006CEFD5 /* DatabaseOperationsViewController.swift in Sources */,
 				357B6E161E6ABFD3000F5E74 /* RouteTableViewCell.swift in Sources */,
 				A0A5948D1E54C007006CEFD5 /* BaseViewController.swift in Sources */,
+				F061DDFF1E701A7B001285C8 /* AutocompletePushViewController.m in Sources */,
 				A0F5D45F1E62A6D60088CCB5 /* Rides.swift in Sources */,
 				1B81D0FA1E5EF71300083182 /* UserProfileViewController.swift in Sources */,
 				1B81D1021E5EF7FC00083182 /* AboutViewController.swift in Sources */,
@@ -549,6 +555,7 @@
 				CODE_SIGN_ENTITLEMENTS = RideShareApp/RideShareApp.entitlements;
 				DEVELOPMENT_TEAM = 9W5FFKY42D;
 				INFOPLIST_FILE = RideShareApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.RideShareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
